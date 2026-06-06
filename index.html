@@ -2,33 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hệ Thống Phân Tích Điểm Xét Tuyển Đại Học</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
-        body { 
-            background-color: #f0f2f5; 
-            font-family: 'Segoe UI', Tahoma, sans-serif; 
-        }
-        .card { 
-            border: none; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
-            border-radius: 12px; 
-        }
-        .table-container { 
-            background: white; 
-            border-radius: 12px; 
-            padding: 20px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
-        }
-        .badge { 
-            font-size: 0.85rem; 
-            padding: 6px 10px; 
-        }
+        body { background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        .card { border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 12px; }
+        .table-container { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .badge { font-size: 0.85rem; padding: 6px 10px; }
     </style>
 </head>
 <body>
@@ -37,17 +18,14 @@
     <p class="text-center text-muted mb-4">Tự động nhận diện tổ hợp khối thi tối ưu nhất</p>
 
     <div class="row g-4">
-
         <div class="col-lg-4">
             
             <div class="card p-3 mb-3">
                 <h5 class="fw-bold text-secondary border-bottom pb-2">1. Chọn Trường & Chứng Chỉ</h5>
-                
                 <div class="mb-2">
                     <label class="form-label small fw-semibold">Trường Đại học</label>
                     <select id="school-select" class="form-select border-primary"></select>
                 </div>
-                
                 <div class="mb-2">
                     <label class="form-label small fw-semibold">Chứng chỉ (Nếu có)</label>
                     <select id="cert-type" class="form-select">
@@ -88,7 +66,7 @@
                     <div class="col-4"><input type="number" step="0.01" id="score-m-sinh" class="form-control form-control-sm" placeholder="Sinh"></div>
                     <div class="col-4"><input type="number" step="0.01" id="score-m-su" class="form-control form-control-sm" placeholder="Sử"></div>
                     <div class="col-4"><input type="number" step="0.01" id="score-m-dia" class="form-control form-control-sm" placeholder="Địa"></div>
-                    <div class="col-4"><input type="number" step="0.01" id="score-m-gdktpl" class="form-control form-control-sm" placeholder="GD KTPL"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-gdktpl" class="form-control form-control-sm" placeholder="GDKTPL"></div>
                 </div>
 
                 <label class="form-label small fw-bold text-primary mt-1">Nhóm Tin & Công Nghệ</label>
@@ -107,22 +85,13 @@
 
                 <button onclick="runCoreAnalysisEngine()" class="btn btn-primary w-100 fw-bold shadow-sm py-2">🚀 TIẾN HÀNH PHÂN TÍCH</button>
             </div>
-
-        </div> 
-        ```
-
-Nhờ sử dụng `<select id="bonus-ut">` kết hợp với các `value="0.25"`, `value="0.5"`, người dùng chỉ cần bấm chọn KV1 hay KV2 bằng mắt thường, còn thuật toán chạy ngầm bên dưới sẽ tự động hút chính xác con số điểm ưu tiên để cộng vào bài toán.
-
-Sau khi đã thay thế đoạn code này, cột bên trái của bạn đã thực sự hoàn chỉnh để "hứng" mọi dữ liệu từ thí sinh. Bạn đã thấy hình hài Cột Trái hiện ra chưa, để chúng ta chuyển qua thiết kế Cột Phải (Bảng hiển thị kết quả Đỗ/Trượt) nhé?
+        </div>
 
         <div class="col-lg-8">
-            <div class="col-lg-8">
             <div class="table-container h-100">
                 <h5 class="fw-bold mb-3 text-dark">📋 Bảng Kết Quả Xét Tuyển</h5>
-                
                 <div class="table-responsive">
                     <table class="table table-hover align-middle">
-                        
                         <thead class="table-light">
                             <tr>
                                 <th style="width: 10%">Mã</th>
@@ -132,7 +101,6 @@ Sau khi đã thay thế đoạn code này, cột bên trái của bạn đã th�
                                 <th style="width: 20%">Trạng Thái</th>
                             </tr>
                         </thead>
-
                         <tbody id="results-tbody">
                             <tr>
                                 <td colspan="5" class="text-center text-muted py-5">
@@ -140,23 +108,13 @@ Sau khi đã thay thế đoạn code này, cột bên trái của bạn đã th�
                                 </td>
                             </tr>
                         </tbody>
-
                     </table>
                 </div>
             </div>
         </div>
-        ```
-
-### 💡 Có một thẻ cực kỳ quan trọng ở đây: `<tbody id="results-tbody">`
-Bạn có thấy phần thẻ này không? Hiện tại, nó chỉ chứa duy nhất một câu thông báo "Vui lòng nhập điểm...". 
-
-Nhưng cái ID `results-tbody` chính là mục tiêu ngắm bắn của thuật toán JavaScript lát nữa. Khi thuật toán tính toán xong cho 10 ngành của HUS, nó sẽ tự động **xóa** câu thông báo đó đi, và **bơm liên tục** 10 dòng kết quả mới tinh vào đúng cái khe `<tbody>` này.
-
-Bây giờ bạn lưu lại và tải lại (F5) trang web. Bạn sẽ thấy một giao diện cực kỳ đồ sộ và hoàn chỉnh hiện ra: Cột trái để nhập liệu, Cột phải là một bảng kết quả trắng tinh khôi đang chờ đợi.
-
-Nếu giao diện đã hiển thị đúng như mong muốn, chúng ta sẽ chuyển sang phần khó nhất, cũng là phần "ma thuật" nhất: **Viết mã JavaScript để nối file HTML này với file dữ liệu `database.js` và `hus.js`!** Bạn sẵn sàng chưa?
 
     </div>
 </div>
+
 </body>
 </html>
