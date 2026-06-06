@@ -117,4 +117,61 @@
 </div>
 
 </body>
+<script src="database.js"></script>
+<script src="db/hus.js"></script>
+<script>
+// ================= HÀM KHỞI TẠO GIAO DIỆN =================
+// Hàm này sẽ tự động chạy ngay khi trang web vừa mở lên
+window.addEventListener("DOMContentLoaded", () => {
+    // 1. Tìm cái ô Chọn Trường trên giao diện
+    const schoolSelect = document.getElementById("school-select");
+    
+    if (schoolSelect) {
+        schoolSelect.innerHTML = '<option value="">-- Chọn trường Đại học --</option>';
+        
+        // 2. Quét toàn bộ kho dữ liệu UNIVERSITY_DATABASE để lấy tên các trường
+        for (let schoolKey in UNIVERSITY_DATABASE) {
+            let option = document.createElement("option");
+            option.value = schoolKey; // VD: "HUS"
+            option.textContent = UNIVERSITY_DATABASE[schoolKey].name; // VD: "Đại học Khoa học Tự nhiên"
+            schoolSelect.appendChild(option);
+        }
+        
+        // 3. Lắng nghe xem khi nào người dùng bấm chọn đổi trường thì chạy hàm onSchoolChange
+        schoolSelect.addEventListener("change", onSchoolChange);
+    }
+});
+
+// ================= HÀM XỬ LÝ KHI ĐỔI TRƯỜNG =================
+function onSchoolChange() {
+    const schoolKey = document.getElementById("school-select").value;
+    const certSelect = document.getElementById("cert-type");
+    
+    // Nếu người dùng chọn "-- Chọn trường --" (Tức là chưa chọn gì) thì thoát hàm
+    if (!schoolKey) return;
+
+    // Cập nhật danh sách chứng chỉ ngoại ngữ tương ứng với trường đó
+    if (certSelect) {
+        certSelect.innerHTML = '<option value="">-- Không có / Không dùng --</option>';
+        const schoolCerts = UNIVERSITY_CERTIFICATES[schoolKey]; // Tìm chứng chỉ của riêng trường này
+        
+        if (schoolCerts) {
+            for (let certKey in schoolCerts) {
+                // Tạo một nhóm chứng chỉ (VD: Nhóm IELTS)
+                let optGroup = document.createElement("optgroup");
+                optGroup.label = certKey;
+                
+                // Lấy các mức điểm (5.5, 6.0...) nhét vào nhóm đó
+                for (let level in schoolCerts[certKey].levels) {
+                    let option = document.createElement("option");
+                    option.value = `${certKey}|${level}`; // VD: "IELTS|5.5"
+                    option.textContent = schoolCerts[certKey].levels[level].text;
+                    optGroup.appendChild(option);
+                }
+                certSelect.appendChild(optGroup);
+            }
+        }
+    }
+}
+</script>
 </html>
