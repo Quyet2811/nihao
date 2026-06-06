@@ -173,5 +173,130 @@ function onSchoolChange() {
         }
     }
 }
+    // ================= HÀM LẤY ĐIỂM TỪ Ô NHẬP LIỆU =================
+// Hàm này giúp lấy điểm an toàn, nếu ô nào để trống thì tự hiểu là 0 điểm
+function getVal(id) {
+    let element = document.getElementById("score-" + id);
+    return element && element.value ? parseFloat(element.value) : 0;
+}
+
+// ================= BỘ LÕI XỬ LÝ PHÂN TÍCH (CORE ENGINE) =================
+function runCoreAnalysisEngine() {
+    const schoolKey = document.getElementById("school-select").value;
+    if (!schoolKey) return alert("Vui lòng chọn một trường Đại học trước khi phân tích!");
+
+    const schoolData = UNIVERSITY_DATABASE[schoolKey];
+    const industries = schoolData.industries;
+    
+    // Tìm cái bảng bên phải và xóa sạch nội dung cũ đi
+    const resultsTable = document.getElementById("results-tbody");
+    resultsTable.innerHTML = ""; 
+
+    // 1. GOM ĐIỂM THI CỦA THÍ SINH
+    const userScores = {
+        "m-toan": getVal("m-toan"), "m-van": getVal("m-van"), "m-anh": getVal("m-anh"),
+        "m-nga": getVal("m-nga"), "m-phap": getVal("m-phap"), "m-trung": getVal("m-trung"),
+        "m-duc": getVal("m-duc"), "m-nhat": getVal("m-nhat"), "m-ly": getVal("m-ly"),
+        "m-hoa": getVal("m-hoa"), "m-sinh": getVal("m-sinh"), "m-su": getVal("m-su"),
+        "m-dia": getVal("m-dia"), "m-gdktpl": getVal("m-gdktpl"), "m-tin": getVal("m-tin"),
+        "m-cncn": getVal("m-cncn"), "m-cnnn": getVal("m-cnnn")
+    };
+
+    // Lấy điểm Ưu Tiên (KV1, KV2...)
+    const bonusUt = parseFloat(document.getElementById("bonus-ut").value) || 0; 
+    
+    // 2. XỬ LÝ CHỨNG CHỈ NGOẠI NGỮ
+    let selectedCert = document.getElementById("cert-type").value;
+    let certBonusThpt = 0;
+    
+    if (selectedCert) {
+        const [certName, certLevel] = selectedCert.split("|"); // Cắt chuỗi "IELTS|5.5" ra
+        const schoolCertConfig = UNIVERSITY_CERTIFICATES[schoolKey]?.[certName]?.levels?.[certLevel];
+        const certLangSubject = UNIVERSITY_CERTIFICATES[schoolKey]?.[certName]?.lang;
+
+        if (schoolCertConfig && certLangSubject) {
+            // Nếu điểm quy đổi cao hơn điểm thi thật thì ghi đè điểm ngoại ngữ
+            if (schoolCertConfig.score > userScores[certLangSubject]) {
+                userScores[certLangSubject] = schoolCertConfig.score;
+            }
+            // Lấy điểm cộng thêm (bonus) nếu có
+            certBonusThpt = schoolCertConfig.bonus || 0;
+        }
+    }
+
+    // 3. QUÉT QUA TỪNG NGÀNH CỦA TRƯỜNG ĐỂ TÍNH ĐIỂM
+    for (let code in industries) {
+        let ind = industries[code];
+        let bestThptScore = -1; 
+        let bestComb = "---";
+
+        // Quét từng tổ hợp khối của ngành đó
+        ind.combs.forEach(combCode => {
+            const subjects = COMBINATIONS_DB[combCode]; // Tìm xem A00 gồm môn gì
+            if (!subjects) return; // Nếu khối lạ không có trong database thì bỏ qua
+
+            // Nếu bị điểm liệt (hoặc không nhập điểm) 1 trong 3 môn của khối -> Loại
+            if (userScores[subjects[0]] === 0 || userScores[subjects[1]] === 0 || userScores[subjects[2]] === 0) return;
+
+            let totalThreeSubjects = userScores[subjects[0]] + userScores[subjects[1]] + userScores[subjects[2]];
+            
+            // Xử lý ngành có môn chính nhân hệ số 2
+            if (ind.mainSubject && ind.weight === 2 && subjects.includes(ind.mainSubject)) {
+                let mainScore = userScores[ind.mainSubject];
+                let otherSubjects = subjects.filter(s => s !== ind.mainSubject);
+                let totalOthers = userScores[otherSubjects[0]] + userScores[otherSubjects[1]];
+                totalThreeSubjects = (mainScore * 2 + totalOthers) * 3 / 4; 
+            }
+
+            // Luật Ưu tiên giảm dần theo quy chế mới của Bộ GD&ĐT (>= 22.5)
+            let actualBonusUt = bonusUt;
+            if (totalThreeSubjects >= 22.5) {
+                actualBonusUt = ((30 - totalThreeSubjects) / 7.5) * bonusUt;
+            }
+
+            // Tính tổng điểm cuối cùng. (Ưu tiên dùng thptConfig của trường nếu có)
+            let finalThpt;
+            if (schoolData.thptConfig) {
+                finalThpt = schoolData.thptConfig.calculate(totalThreeSubjects, actualBonusUt, certBonusThpt);
+            } else {
+                finalThpt = totalThreeSubjects + actualBonusUt + certBonusThpt;
+            }
+            
+            // So sánh xem khối này có điểm cao hơn khối trước đó không
+            if (finalThpt > bestThptScore) {
+                bestThptScore = finalThpt;
+                bestComb = combCode;
+            }
+        });
+
+        // 4. HIỂN THỊ KẾT QUẢ RA BẢNG GIAO DIỆN
+        let thptStatusHtml = `<span class="badge bg-danger">Trượt</span>`;
+        let displayThptScore = "0.00";
+
+        if (bestComb === "---" || bestThptScore === -1) {
+            bestComb = "Thiếu điểm";
+            displayThptScore = "---";
+            thptStatusHtml = `<span class="badge bg-secondary">Không đủ môn</span>`;
+        } else {
+            displayThptScore = bestThptScore.toFixed(2);
+            if (bestThptScore >= ind.scores.combined) {
+                thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ</span>`;
+            } else {
+                thptStatusHtml = `<span class="badge bg-danger">Thiếu ${(ind.scores.combined - bestThptScore).toFixed(2)} đ</span>`;
+            }
+        }
+
+        // Tạo 1 dòng mới trong bảng và nhét dữ liệu vào
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td><strong>${code}</strong></td>
+            <td class="text-primary fw-semibold">${ind.name}</td>
+            <td><span class="badge bg-light text-dark border border-secondary">${bestComb}</span></td>
+            <td><span class="fw-bold">${displayThptScore}</span> / <span class="text-muted small">${ind.scores.combined}</span></td>
+            <td>${thptStatusHtml}</td>
+        `;
+        resultsTable.appendChild(row);
+    }
+}
 </script>
 </html>
