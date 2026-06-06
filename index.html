@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-// PHẦN HEAD
 <head>
     <meta charset="UTF-8">
 
@@ -32,7 +31,6 @@
         }
     </style>
 </head>
-// PHẦN BODY:
 <body>
 <div class="container my-4">
     <h1 class="text-center mb-1 fw-bold text-primary">📊 HỆ THỐNG TRA CỨU KHẢ NĂNG ĐỖ ĐẠI HỌC</h1>
@@ -41,6 +39,7 @@
     <div class="row g-4">
 
         <div class="col-lg-4">
+            
             <div class="card p-3 mb-3">
                 <h5 class="fw-bold text-secondary border-bottom pb-2">1. Chọn Trường & Chứng Chỉ</h5>
                 
@@ -57,11 +56,105 @@
                 </div>
             </div>
 
+            <div class="card p-3 mb-3">
+                <h5 class="fw-bold text-secondary border-bottom pb-2">2. Nhập Điểm Của Bạn</h5>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-bold text-danger">Khu vực ưu tiên</label>
+                    <select id="bonus-ut" class="form-select form-select-sm border-danger">
+                        <option value="0">Khu vực 3 (0 điểm)</option>
+                        <option value="0.25">Khu vực 2 (0.25 điểm)</option>
+                        <option value="0.5">Khu vực 2-NT (0.5 điểm)</option>
+                        <option value="0.75">Khu vực 1 (0.75 điểm)</option>
+                    </select>
+                </div>
+
+                <label class="form-label small fw-bold text-primary mt-1">Toán - Văn - Ngoại ngữ</label>
+                <div class="row g-2 mb-2">
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-toan" class="form-control form-control-sm" placeholder="Toán"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-van" class="form-control form-control-sm" placeholder="Văn"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-anh" class="form-control form-control-sm" placeholder="Anh"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-nga" class="form-control form-control-sm" placeholder="Nga"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-phap" class="form-control form-control-sm" placeholder="Pháp"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-trung" class="form-control form-control-sm" placeholder="Trung"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-duc" class="form-control form-control-sm" placeholder="Đức"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-nhat" class="form-control form-control-sm" placeholder="Nhật"></div>
+                </div>
+
+                <label class="form-label small fw-bold text-primary mt-1">KHTN & KHXH</label>
+                <div class="row g-2 mb-2">
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-ly" class="form-control form-control-sm" placeholder="Lý"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-hoa" class="form-control form-control-sm" placeholder="Hóa"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-sinh" class="form-control form-control-sm" placeholder="Sinh"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-su" class="form-control form-control-sm" placeholder="Sử"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-dia" class="form-control form-control-sm" placeholder="Địa"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-gdktpl" class="form-control form-control-sm" placeholder="GD KTPL"></div>
+                </div>
+
+                <label class="form-label small fw-bold text-primary mt-1">Nhóm Tin & Công Nghệ</label>
+                <div class="row g-2 mb-3">
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-tin" class="form-control form-control-sm" placeholder="Tin học"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-cncn" class="form-control form-control-sm" placeholder="CN CN"></div>
+                    <div class="col-4"><input type="number" step="0.01" id="score-m-cnnn" class="form-control form-control-sm" placeholder="CN NN"></div>
+                </div>
+
+                <label class="form-label small fw-bold text-success border-top pt-2">Kỳ thi riêng</label>
+                <div class="row g-2 mb-3">
+                    <div class="col-12">
+                        <input type="number" step="0.5" id="score-hsa" class="form-control form-control-sm" placeholder="Điểm HSA (VD: 95.5)">
+                    </div>
+                </div>
+
+                <button onclick="runCoreAnalysisEngine()" class="btn btn-primary w-100 fw-bold shadow-sm py-2">🚀 TIẾN HÀNH PHÂN TÍCH</button>
             </div>
 
+        </div> 
+        ```
+
+Nhờ sử dụng `<select id="bonus-ut">` kết hợp với các `value="0.25"`, `value="0.5"`, người dùng chỉ cần bấm chọn KV1 hay KV2 bằng mắt thường, còn thuật toán chạy ngầm bên dưới sẽ tự động hút chính xác con số điểm ưu tiên để cộng vào bài toán.
+
+Sau khi đã thay thế đoạn code này, cột bên trái của bạn đã thực sự hoàn chỉnh để "hứng" mọi dữ liệu từ thí sinh. Bạn đã thấy hình hài Cột Trái hiện ra chưa, để chúng ta chuyển qua thiết kế Cột Phải (Bảng hiển thị kết quả Đỗ/Trượt) nhé?
+
         <div class="col-lg-8">
-            
+            <div class="col-lg-8">
+            <div class="table-container h-100">
+                <h5 class="fw-bold mb-3 text-dark">📋 Bảng Kết Quả Xét Tuyển</h5>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 10%">Mã</th>
+                                <th style="width: 30%">Tên Ngành</th>
+                                <th style="width: 15%">Khối Tối Ưu</th>
+                                <th style="width: 25%">Điểm Bạn / Điểm Chuẩn</th>
+                                <th style="width: 20%">Trạng Thái</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="results-tbody">
+                            <tr>
+                                <td colspan="5" class="text-center text-muted py-5">
+                                    Vui lòng nhập điểm và ấn "Tiến hành phân tích" để xem kết quả.
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
             </div>
+        </div>
+        ```
+
+### 💡 Có một thẻ cực kỳ quan trọng ở đây: `<tbody id="results-tbody">`
+Bạn có thấy phần thẻ này không? Hiện tại, nó chỉ chứa duy nhất một câu thông báo "Vui lòng nhập điểm...". 
+
+Nhưng cái ID `results-tbody` chính là mục tiêu ngắm bắn của thuật toán JavaScript lát nữa. Khi thuật toán tính toán xong cho 10 ngành của HUS, nó sẽ tự động **xóa** câu thông báo đó đi, và **bơm liên tục** 10 dòng kết quả mới tinh vào đúng cái khe `<tbody>` này.
+
+Bây giờ bạn lưu lại và tải lại (F5) trang web. Bạn sẽ thấy một giao diện cực kỳ đồ sộ và hoàn chỉnh hiện ra: Cột trái để nhập liệu, Cột phải là một bảng kết quả trắng tinh khôi đang chờ đợi.
+
+Nếu giao diện đã hiển thị đúng như mong muốn, chúng ta sẽ chuyển sang phần khó nhất, cũng là phần "ma thuật" nhất: **Viết mã JavaScript để nối file HTML này với file dữ liệu `database.js` và `hus.js`!** Bạn sẵn sàng chưa?
 
     </div>
 </div>
