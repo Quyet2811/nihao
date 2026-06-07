@@ -61,7 +61,7 @@ UNIVERSITY_CERTIFICATES["TMU"] = {
 UNIVERSITY_DATABASE["TMU"] = {
     name: "Trường đại học Thương mại (TMU)",
  hsaConfig: {
-        status: "updating", 
+        status: "active", 
         calculate: function(rawHsa, bonusUt, certBonus) {
             // Do chưa có barem chính thức năm nay nên tạm thời trả về 0
             return 0; 
