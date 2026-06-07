@@ -119,6 +119,7 @@
 </body>
 <script src="database.js"></script>
 <script src="db/hus.js"></script>
+<script src="db/tmu.js"></script>
 <script>
 // ================= HÀM KHỞI TẠO GIAO DIỆN =================
 // Hàm này sẽ tự động chạy ngay khi trang web vừa mở lên
@@ -229,6 +230,13 @@ function runCoreAnalysisEngine() {
         let ind = industries[code];
         let bestThptScore = -1; 
         let bestComb = "---";
+        let isPassCondition = true;
+        if (ind.condition) { 
+            if (userScores[ind.condition.subject] < ind.condition.min) {
+                isPassCondition = false; 
+            }
+        }
+        if ( isPassCondition ) {
 
         // Quét từng tổ hợp khối của ngành đó
         ind.combs.forEach(combCode => {
@@ -268,16 +276,26 @@ function runCoreAnalysisEngine() {
                 bestComb = combCode;
             }
         });
-
-        // 4. HIỂN THỊ KẾT QUẢ RA BẢNG GIAO DIỆN
+        }
+       // 4. HIỂN THỊ KẾT QUẢ RA BẢNG GIAO DIỆN
         let thptStatusHtml = `<span class="badge bg-danger">Trượt</span>`;
         let displayThptScore = "0.00";
 
-        if (bestComb === "---" || bestThptScore === -1) {
+        // --- ĐOẠN ĐƯỢC NÂNG CẤP Ở ĐÂY ---
+        if (!isPassCondition) {
+            // NẾU BỊ CHẶN Ở TIÊU CHÍ PHỤ
+            bestComb = "---";
+            displayThptScore = "---";
+            thptStatusHtml = `<span class="badge bg-dark" title="Điểm thành phần không đạt">Tạch điều kiện ( < ${ind.condition.min}đ )</span>`;
+        } 
+        else if (bestComb === "---" || bestThptScore === -1) {
+            // NẾU THIẾU ĐIỂM HOẶC TRỐNG MÔN
             bestComb = "Thiếu điểm";
             displayThptScore = "---";
             thptStatusHtml = `<span class="badge bg-secondary">Không đủ môn</span>`;
-        } else {
+        } 
+        else {
+            // NẾU XÉT ĐIỂM THÀNH CÔNG
             displayThptScore = bestThptScore.toFixed(2);
             if (bestThptScore >= ind.scores.combined) {
                 thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ</span>`;
@@ -285,6 +303,7 @@ function runCoreAnalysisEngine() {
                 thptStatusHtml = `<span class="badge bg-danger">Thiếu ${(ind.scores.combined - bestThptScore).toFixed(2)} đ</span>`;
             }
         }
+        // --- KẾT THÚC ĐOẠN NÂNG CẤP ---
 
         // Tạo 1 dòng mới trong bảng và nhét dữ liệu vào
         let row = document.createElement("tr");
