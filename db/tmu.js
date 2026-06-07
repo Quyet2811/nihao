@@ -83,9 +83,260 @@ UNIVERSITY_DATABASE["TMU"] = {
 
     // 3. Danh sách các ngành học
     industries: {
-      "QHT01": {
-        name: "Toán học",
-        combs: ["A00","A01","C01","D07","D08","X26"],
-        mainSubject: "m-toan", 
-        weight: 2,
-        scores: { combined:25.9,hsa: null }
+        "TM01": {
+            name: "Quản trị kinh doanh",
+            combs: ["A00","A01";"D01";"D07"],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM02": {
+            name: "Quản trị kinh doanh - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM03": {
+            name: "Quản trị kinh doanh (Khởi nghiệp và phát triển kinh doanh) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM04": {
+            name: "Quản trị khách sạn ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM05": {
+            name: "Quản trị khách sạn (Quản trị khách sạn - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM06": {
+            name: "Quản trị dịch vụ du lịch và lữ hành ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM07": {
+            name: "Marketing (Marketing Thương mại) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM08": {
+            name: "Marketing (Marketing thương mại - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM09": {
+            name: "Marketing (Marketing số) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM10": {
+            name: "Marketing (Quản trị Thương hiệu) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM11": {
+            name: "Marketing (Quản trị thương hiệu - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM12": {
+            name: "Kế toán (Kế toán doanh nghiệp) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM13": {
+            name: "Kế toán (Kế toán tích hợp chứng chỉ quốc tế ICAEW CFAB - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+         "TM14": {
+            name: " Kế toán (Kế toán công)",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM15": {
+            name: "Kiểm toán (Kiểm toán) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM16": {
+            name: "Kiểm toán (Kiểm toán tích hợp chứng chỉ quốc tế ICAEW CFAB - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM17": {
+            name: "Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý chuỗi cung ứng) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM18": {
+            name: "Logistics và Quản lý chuỗi cung ứng (Logistics và Xuất nhập khẩu - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM19": {
+            name: "Kinh doanh quốc tế (Thương mại quốc tế) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM20": {
+            name: "Kinh doanh quốc tế (Thương mại quốc tế - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM21": {
+            name: " Kinh tế quốc tế",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM22": {
+            name: "Kinh tế (Quản lý kinh tế) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM23": {
+            name: "Kinh tế (Kinh tế và Quản lý đầu tư - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM24": {
+            name: " Tài chính - Ngân hàng (Tài chính - Ngân hàng thương mại)",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM25": {
+            name: "Tài chính - Ngân hàng (Tài chính - Ngân hàng thương mại - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM26": {
+            name: " Tài chính - Ngân hàng (Tài chính công)",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM27": {
+            name: "Tài chính - Ngân hàng (Công nghệ tài chính ngân hàng) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM28": {
+            name: "Thương mại điện tử (Quản trị thương mại điện tử) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM29": {
+            name: "Thương mại điện tử (Thương mại điện tử - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM30": {
+            name: "Thương mại điện tử (Kinh doanh số) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM31": {
+            name: "Hệ thống thông tin quản lý (Quản trị Hệ thống thông tin) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM32": {
+            name: "Hệ thống thông tin quản lý (Quản trị Hệ thống thông tin - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM33": {
+            name: "Ngôn ngữ Anh (Tiếng Anh thương mại) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM34": {
+            name: "Luật kinh tế (Luật kinh tế) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM35": {
+            name: " Luật kinh tế (Luật kinh doanh - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM36": {
+            name: "Luật kinh tế (Luật thương mại quốc tế) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM37": {
+            name: "Quản trị nhân lực (Quản trị nhân lực doanh nghiệp) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM38": {
+            name: "Quản trị nhân lực (Quản trị nhân lực doanh nghiệp - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM39": {
+            name: "Kinh tế số (Phân tích kinh doanh trong môi trường số) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM40": {
+            name: "Ngôn ngữ Trung Quốc (Tiếng Trung thương mại) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM41": {
+            name: "Ngôn ngữ Trung Quốc (Tiếng Trung thương mại - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM42": {
+            name: " Quản trị kinh doanh (Tiếng Pháp thương mại)",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM43": {
+            name: "Quản trị kinh doanh (Quản trị kinh doanh) - Khởi nghiệp (Thành lập doanh nghiệp) - Chương trình đào tạo song bằng quốc tế ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM44": {
+            name: "Marketing (Marketing thương mại) - Thương mại sản phẩm và dịch vụ (Bán hàng) - Chương trình đào tạo song bằng quốc tế ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM45": {
+            name: "Quản trị kinh doanh (Quản trị kinh doanh - Chương trình đào tạo tiến tiến) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM46": {
+            name: "Logistics và quản lý chuỗi cung ứng (Logistics và quản lý chuỗi cung ứng) - Thương mại và phân phối (Quản lý chuỗi cung ứng và phân phối) - Chương trình đào tạo song bằng quốc tế ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM47": {
+            name: "Kế toán (Kế toán tích hợp chứng chỉ quốc tế ICAEW CFAB) - Bảo hiểm, ngân hàng, tài chính: Quan hệ khách hàng (Thương mại sản phẩm ngân hàng và dịch vụ tài chính) - Chương trình đào tạo song bằng quốc tế ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM48": {
+            name: " Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý vận tải đa phương thức - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM49": {
+            name: "Kinh tế số (Phân tích dữ liệu trong kinh tế và kinh doanh - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM50": {
+            name: "Quản trị dịch vụ du lịch và lữ hành (Quản trị sự kiện và dịch vụ giải trí - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        },
+        "TM51": {
+            name: "Khoa học máy tính (Ứng dụng trí tuệ nhân tạo trong kinh doanh) ",
+            combs: [  ],
+            scores: { combined: null, hsa: null } 
+        }
+    }
+};
