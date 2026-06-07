@@ -59,20 +59,24 @@ UNIVERSITY_CERTIFICATES["TMU"] = {
 };
 
 UNIVERSITY_DATABASE["TMU"] = {
-    name: "Trường đại học Thương mại (TMU)",
- hsaConfig: {
+    name: "Trường đại học Thương mại (TMU)", 
+    hsaConfig: {
         status: "active", 
         calculate: function(rawHsa, bonusUt, certBonus) {
-            // Do chưa có barem chính thức năm nay nên tạm thời trả về 0
-            return 0; 
+            // Nếu người dùng không thi HSA (bỏ trống hoặc nhập 0) thì hệ thống bỏ qua
+            if (!rawHsa || rawHsa === 0) return 0;
+            // Công thức TMU: Đưa điểm ưu tiên và chứng chỉ từ thang 30 lên thang 150
+            let finalScore = rawHsa + ((bonusUt + certBonus) * (150 / 30));
+            // Trả về kết quả làm tròn đến 2 chữ số thập phân
+            return parseFloat(finalScore.toFixed(2)); 
         }
     },
 
-    // 2. Định nghĩa công thức tính điểm THPT ĐẶC THÙ cho riêng HUS
+    // 2. Định nghĩa công thức tính điểm THPT ĐẶC THÙ cho riêng TMU
     // Nếu các trường khác không có block này, hệ thống sẽ tự dùng công thức mặc định
     thptConfig: {
         calculate: function(totalThreeSubjects, actualBonusUt, certBonusThpt) {
-            // Với HUS, điểm xét tuyển bằng Tổng 3 môn + Ưu tiên + Điểm cộng từ chứng chỉ (bonus)
+            // Với TMU, điểm xét tuyển bằng Tổng 3 môn + Ưu tiên + Điểm cộng từ chứng chỉ (bonus)
             return totalThreeSubjects + actualBonusUt + certBonusThpt;
         }
     },
