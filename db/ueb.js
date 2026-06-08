@@ -43,7 +43,7 @@ UNIVERSITY_DATABASE["UEB"] = {
         condition: { subject: "m-toan", min: 7.25 },
         scores: { combined:24.3,hsa: null }
      },
-       "7310101": {
+       "7310101A01": {
         name: "Ngành Kinh tế A01",
         combs: ["A01"],
         condition: { subject: "m-toan", min: 7.25 },
