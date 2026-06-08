@@ -50,3 +50,33 @@ UNIVERSITY_CERTIFICATES["TMU"] = {
         }
     }
 };
+UNIVERSITY_DATABASE["USSH"] = {
+    name: "Đại học Khoa học Xã hội và Nhân văn (ĐHQGHN)",
+    
+    // 1. Báo trạng thái HSA đang chờ cập nhật
+    hsaConfig: {
+        status: "updating", 
+        calculate: function(rawHsa, bonusUt, certBonus) {
+            // Do chưa có barem chính thức năm nay nên tạm thời trả về 0
+            return 0; 
+        }
+    },
+
+    // 2. Định nghĩa công thức tính điểm THPT ĐẶC THÙ cho riêng HUS
+    // Nếu các trường khác không có block này, hệ thống sẽ tự dùng công thức mặc định
+    thptConfig: {
+        calculate: function(totalThreeSubjects, actualBonusUt, certBonusThpt) {
+            // Với HUS, điểm xét tuyển bằng Tổng 3 môn + Ưu tiên + Điểm cộng từ chứng chỉ (bonus)
+            return totalThreeSubjects + actualBonusUt + certBonusThpt;
+        }
+    },
+
+    // 3. Danh sách các ngành học
+    industries: {
+      "QHT01": {
+        name: "Toán học",
+        combs: ["A00","A01","C01","D07","D08","X26"],
+        mainSubject: "m-toan", 
+        weight: 2,
+        scores: { combined:25.9,hsa: null }
+      },
