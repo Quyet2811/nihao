@@ -35,7 +35,7 @@ const COMBINATIONS_DB = {
     "C12": ["m-van", "m-su", "m-sinh"],
     "C13": ["m-van", "m-sinh", "m-dia"],
   // Khối D:
-    "DD2": ["m-van", "m-toan", "m=han"],
+    "DD2": ["m-van", "m-toan", "m-han"],
     "D01": ["m-van", "m-toan", "m-anh"],
     "D02": ["m-van", "m-toan", "m-nga"],
     "D03": ["m-van", "m-toan", "m-phap"],
