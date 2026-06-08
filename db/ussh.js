@@ -73,10 +73,150 @@ UNIVERSITY_DATABASE["USSH"] = {
 
     // 3. Danh sách các ngành học
     industries: {
-      "QHT01": {
-        name: "Toán học",
-        combs: ["A00","A01","C01","D07","D08","X26"],
-        mainSubject: "m-toan", 
-        weight: 2,
-        scores: { combined:25.9,hsa: null }
+      "QHX01": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
       },
+      "QHX02": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+      "QHX03": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX04": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX05": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX06": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX07": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX08": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX09": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX10": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX11": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX12": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX13": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX14": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX15": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX16": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX17": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX18": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX19": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX20": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX21": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX22": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX23": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX24": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX25": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX26": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX27": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX28": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX29": {
+        name: "Báo chí",
+        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      }
+    }
+};
