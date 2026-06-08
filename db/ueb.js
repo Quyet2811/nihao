@@ -39,9 +39,15 @@ UNIVERSITY_DATABASE["UEB"] = {
    industries: {
      "7310101": {
         name: "Ngành Kinh tế",
-        combs: ["A01","C01","C03","C04","D01","D09","D10","X01"],
+        combs: ["C01","C03","C04","D01","D09","D10","X01"],
         condition: { subject: "m-toan", min: 7.25 },
         scores: { combined:24.3,hsa: null }
+     },
+       "7310101": {
+        name: "Ngành Kinh tế",
+        combs: ["A01"],
+        condition: { subject: "m-toan", min: 7.25 },
+        scores: { combined:24.5,hsa: null }
      },
       "7310105": {
         name: "Ngành Kinh tế phát triển",
