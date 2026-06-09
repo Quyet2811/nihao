@@ -73,10 +73,20 @@ UNIVERSITY_DATABASE["USSH"] = {
 
     // 3. Danh sách các ngành học
     industries: {
-      "QHX01": {
+      "QHX01(Khối mới)": {
         name: "Báo chí",
-        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
+      },
+        "QHX01(D01)": {
+        name: "Báo chí",
+        combs: ["D01"],
+        scores: { combined:24.7,hsa: null }
+      },
+        "QHX01(D14,15)": {
+        name: "Báo chí",
+        combs: ["D14","D15"],
+        scores: { combined:25.2,hsa: null }
       },
       "QHX02": {
         name: "Chính trị học",
