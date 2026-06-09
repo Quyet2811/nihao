@@ -130,7 +130,7 @@ UNIVERSITY_DATABASE["USSH"] = {
       },
          "QHX04(Khối mới)": {
         name: "Lý luận, lịch sử và phê bình điện ảnh truyền hình ",
-        combs: [,"D09","D10","D11"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
         "QHX04(C00)": {
@@ -176,7 +176,7 @@ UNIVERSITY_DATABASE["USSH"] = {
          "QHX06(D14,15)": {
         name: "Đông phương học",
         combs: ["D04","D01","D09","D10","D11","D14","D15"],
-        scores: { combined:,hsa: null }
+        scores: { combined:25,hsa: null }
       },
          "QHX07(Khối mới)": {
         name: "Hán Nôm",
