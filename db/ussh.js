@@ -88,143 +88,468 @@ UNIVERSITY_DATABASE["USSH"] = {
         combs: ["D14","D15"],
         scores: { combined:25.2,hsa: null }
       },
-      "QHX02": {
+      "QHX02(Khối mới)": {
         name: "Chính trị học",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-      "QHX03": {
+         "QHX02(C00)": {
+        name: "Chính trị học",
+        combs: ["C00"],
+        scores: { combined:26.68,hsa: null }
+      },
+         "QHX02(D14,15)": {
+        name: "Chính trị học",
+        combs: ["D14","D15"],
+        scores: { combined:25.86,hsa: null }
+      },
+         "QHX02(D01)": {
+        name: "Chính trị học",
+        combs: ["D01"],
+        scores: { combined:25.36,hsa: null }
+      },
+      "QHX03(Khối mới)": {
         name: "Công tác xã hội",
-        combs: ["A01","D01","D09","D10","D11","D14","D15","C00"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX04": {
+         "QHX03(C00)": {
+        name: "Công tác xã hội",
+        combs: ["C00"],
+        scores: { combined:26.99,hsa: null }
+      },
+         "QHX03(D01)": {
+        name: "Công tác xã hội",
+        combs: ["D01"],
+        scores: { combined:24.49,hsa: null }
+      },
+         "QHX03(D14,15)": {
+        name: "Công tác xã hội",
+        combs: ["D14","D15"],
+        scores: { combined:24.99,hsa: null }
+      },
+         "QHX04(Khối mới)": {
         name: "Lý luận, lịch sử và phê bình điện ảnh truyền hình ",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: [,"D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX05": {
-        name: "Đông Nam Á ",
-        combs: ["D01","D09","D10","D11","D14","D15"],
+        "QHX04(C00)": {
+        name: "Lý luận, lịch sử và phê bình điện ảnh truyền hình ",
+        combs: ["C00"],
+        scores: { combined:27.3,hsa: null }
+      },
+        "QHX04(D01)": {
+        name: "Lý luận, lịch sử và phê bình điện ảnh truyền hình ",
+        combs: ["D01"],
+        scores: { combined:24.8,hsa: null }
+      },
+        "QHX04(D14,15)": {
+        name: "Lý luận, lịch sử và phê bình điện ảnh truyền hình ",
+        combs: ["D14","D15"],
+        scores: { combined:25.3,hsa: null }
+      },
+         "QHX05(Khối mới)": {
+        name: "Đông Nam Á học",
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX06": {
+         "QHX05(D01)": {
+        name: "Đông Nam Á học",
+        combs: ["D01"],
+        scores: { combined:21.75,hsa: null }
+      },
+         "QHX05(D14,15)": {
+        name: "Đông Nam Á học",
+        combs: ["D14","D15"],
+        scores: { combined:23.25,hsa: null }
+      },
+         "QHX06(Khối mới)": {
+        name: "Đông phương học",
+        combs: ["D09","D10","D11"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX06(D01,D04)": {
+        name: "Đông phương học",
+        combs: ["D04","D01"],
+        scores: { combined:24.5,hsa: null }
+      },
+         "QHX06(D14,15)": {
         name: "Đông phương học",
         combs: ["D04","D01","D09","D10","D11","D14","D15"],
-        scores: { combined:null,hsa: null }
+        scores: { combined:,hsa: null }
       },
-         "QHX07": {
+         "QHX07(Khối mới)": {
         name: "Hán Nôm",
-        combs: ["C00","D01","D09","D10","D11","D14","D15","D04"],
+        combs: ["D01","D09","D10","D11","D04"],
         scores: { combined:null,hsa: null }
       },
-         "QHX08": {
+         "QHX07(C00)": {
+        name: "Hán Nôm",
+        combs: ["C00"],
+        scores: { combined:25.76,hsa: null }
+      },
+         "QHX07(D14,15)": {
+        name: "Hán Nôm",
+        combs: ["D14","D15"],
+        scores: { combined:24.76,hsa: null }
+      },
+         "QHX08(Khối mới)": {
         name: "Hàn Quốc học",
-        combs: ["DD2","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX09": {
+        "QHX08(D01,DD2)": {
+        name: "Hàn Quốc học",
+        combs: ["DD2","D01"],
+        scores: { combined:24.33,hsa: null }
+      },
+        "QHX08(D14,15)": {
+        name: "Hàn Quốc học",
+        combs: ["D14","D15"],
+        scores: { combined:24.83,hsa: null }
+      },
+         "QHX09(Khối mới)": {
         name: "Khoa học quản lý",
-        combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX10": {
+        "QHX09(D01)": {
+        name: "Khoa học quản lý",
+        combs: ["D01"],
+        scores: { combined:24.18,hsa: null }
+      },
+        "QHX09(D14,15)": {
+        name: "Khoa học quản lý",
+        combs: ["D14","D15"],
+        scores: { combined:24.68,hsa: null }
+      },
+        "QHX10(Khối mới)": {
         name: "Lịch sử",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX11": {
+        "QHX10(C00)": {
+        name: "Lịch sử",
+        combs: ["C00"],
+        scores: { combined:27.30,hsa: null }
+      },
+          "QHX10(D01)": {
+        name: "Lịch sử",
+        combs: ["D01"],
+        scores: { combined:25.8,hsa: null }
+      },
+          "QHX10(D14,15)": {
+        name: "Lịch sử",
+        combs: ["D14","D15"],
+        scores: { combined:26.3,hsa: null }
+      },
+         "QHX11(Khối mới)": {
         name: "Lưu trữ học",
-        combs: ["A01","D01","D09","D10","D11","D14","D15","C00"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX12": {
+         "QHX11(C00)": {
+        name: "Lưu trữ học",
+        combs: ["C00"],
+        scores: { combined:26.04,hsa: null }
+      },
+         "QHX11(D01)": {
+        name: "Lưu trữ học",
+        combs: ["D01"],
+        scores: { combined:24.54,hsa: null }
+      },
+         "QHX11(D14,15)": {
+        name: "Lưu trữ học",
+        combs: ["D14","D15"],
+        scores: { combined:25.04,hsa: null }
+      },
+         "QHX12(Khối mới)": {
         name: "Ngôn ngữ học",
-        combs: ["A01","D01","D09","D10","D11","D14","D15","C00"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX13": {
+        "QHX12(C00)": {
+        name: "Ngôn ngữ học",
+        combs: ["C00"],
+        scores: { combined:26.75,hsa: null }
+      },
+        "QHX12(D01)": {
+        name: "Ngôn ngữ học",
+        combs: ["D01"],
+        scores: { combined:25.25,hsa: null }
+      },
+        "QHX12(D14,15)": {
+        name: "Ngôn ngữ học",
+        combs: ["D14","D15"],
+        scores: { combined:25.75,hsa: null }
+      },
+      "QHX13(Khối mới)": {
         name: "Nhân học",
         combs: ["C00","D01","D09","D10","D11","D14","D15"],
         scores: { combined:null,hsa: null }
       },
-         "QHX14": {
+         "QHX13(C00)": {
+        name: "Nhân học",
+        combs: ["C00"],
+        scores: { combined:25.8,hsa: null }
+      },
+         "QHX13(D01)": {
+        name: "Nhân học",
+        combs: ["D01"],
+        scores: { combined:24.3,hsa: null }
+      },
+         "QHX13(D14,15)": {
+        name: "Nhân học",
+        combs: ["D14","D15"],
+        scores: { combined:24.8,hsa: null }
+      },
+         "QHX14(Khối mới)": {
+        name: "Nhật Bản học",
+        combs: ["A01","D09","D10","D11","D14","D15"],
+        scores: { combined:null,hsa: null }
+      },
+         "QHX14(D01,D06)": {
         name: "Nhật Bản học",
         combs: ["A01","D01","D09","D10","D11","D14","D15","D06"],
+        scores: { combined:21.75,hsa: null }
+      },
+         "QHX15(Khối mới)": {
+        name: "Quan hệ công chúng",
+        combs: ["A01","D01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX15": {
+        "QHX15(D14,15)": {
         name: "Quan hệ công chúng",
         combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:25.95,hsa: null }
+      },
+         "QHX16(Khối mới)": {
+        name: "Quản lý thông tin",
+        combs: ["A01","D01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX16": {
+         "QHX16(D14,15)": {
         name: "Quản lý thông tin",
         combs: ["A01","D01","D09","D10","D11","D14","D15"],
-        scores: { combined:null,hsa: null }
+        scores: { combined:24.99,hsa: null }
       },
-         "QHX17": {
+         "QHX17(Khối mới)": {
         name: "Quản trị dịch vụ du lịch và lữ hành",
-        combs: ["D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX18": {
+         "QHX17(D01)": {
+        name: "Quản trị dịch vụ du lịch và lữ hành",
+        combs: ["D01"],
+        scores: { combined:24.37,hsa: null }
+      },
+         "QHX17(D14,15)": {
+        name: "Quản trị dịch vụ du lịch và lữ hành",
+        combs: ["D14","D15"],
+        scores: { combined:24.87,hsa: null }
+      },
+         "QHX18(Khối mới)": {
+        name: "Quản trị khách sạn",
+        combs: ["D09","D10","D11"],
+        scores: { combined:null,hsa: null }
+      },
+        "QHX18(D01)": {
         name: "Quản trị khách sạn",
         combs: ["D01","D09","D10","D11","D14","D15"],
+        scores: { combined:23.99,hsa: null }
+      },
+        "QHX18(D14,15)": {
+        name: "Quản trị khách sạn",
+        combs: ["D01","D09","D10","D11","D14","D15"],
+        scores: { combined:24.99,hsa: null }
+      },
+         "QHX19(Khối mới)": {
+        name: "Quản trị văn phòng",
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX19": {
+        "QHX19(D01)": {
         name: "Quản trị văn phòng",
         combs: ["A01","D01","D09","D10","D11","D14","D15"],
-        scores: { combined:null,hsa: null }
+        scores: { combined:24.93,hsa: null }
       },
-         "QHX20": {
-        name: "Quốc tế học",
+        "QHX19(D14,15)": {
+        name: "Quản trị văn phòng",
         combs: ["A01","D01","D09","D10","D11","D14","D15"],
+        scores: { combined:25.43,hsa: null }
+      },
+         "QHX20(Khối mới)": {
+        name: "Quốc tế học",
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX21": {
+        "QHX20(D01)": {
+        name: "Quốc tế học",
+        combs: ["D01"],
+        scores: { combined:23,hsa: null }
+      },
+        "QHX20(D14,15)": {
+        name: "Quốc tế học",
+        combs: ["D14","D15"],
+        scores: { combined:23.5,hsa: null }
+      },
+         "QHX21(Khối mới)": {
         name: "Tâm lý học",
-        combs: ["D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX22": {
+        "QHX21(D01)": {
+        name: "Tâm lý học",
+        combs: ["D01"],
+        scores: { combined:25.5,hsa: null }
+      },
+        "QHX21(D14,15)": {
+        name: "Tâm lý học",
+        combs: ["D14","D15"],
+        scores: { combined:26,hsa: null }
+      },
+         "QHX22(Khối mới)": {
         name: "Thông tin-Thư viện",
-        combs: ["A01","D01","D09","D10","D11","D14","D15","C00"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX23": {
+        "QHX22(C00)": {
+        name: "Thông tin-Thư viện",
+        combs: ["C00"],
+        scores: { combined:25.41,hsa: null }
+      },
+        "QHX22(D01)": {
+        name: "Thông tin-Thư viện",
+        combs: ["D01"],
+        scores: { combined:23.91,hsa: null }
+      },
+        "QHX22(D14,15)": {
+        name: "Thông tin-Thư viện",
+        combs: ["D14","D15"],
+        scores: { combined:24.41,hsa: null }
+      },
+         "QHX23(Khối mới)": {
         name: "Tôn giáo học",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX24": {
+        "QHX23(C00)": {
+        name: "Tôn giáo học",
+        combs: ["C00"],
+        scores: { combined:25,hsa: null }
+      },
+        "QHX23(D01)": {
+        name: "Tôn giáo học",
+        combs: ["D01"],
+        scores: { combined:23.5,hsa: null }
+      },
+        "QHX23(D14,15)": {
+        name: "Tôn giáo học",
+        combs: ["D14","D15"],
+        scores: { combined:24,hsa: null }
+      },
+         "QHX24(Khối mới)": {
         name: "Triết học",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX25": {
+        "QHX24(C00)": {
+        name: "Triết học",
+        combs: ["C00"],
+        scores: { combined:25.89,hsa: null }
+      },
+        "QHX24(D01)": {
+        name: "Triết học",
+        combs: ["D01"],
+        scores: { combined:24.39,hsa: null }
+      },
+        "QHX24(D14,15)": {
+        name: "Triết học",
+        combs: ["D14","D15"],
+        scores: { combined:24.89,hsa: null }
+      },
+         "QHX25(Khối mới)": {
         name: "Văn hóa học",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX26": {
+         "QHX25(C00)": {
+        name: "Văn hóa học",
+        combs: ["C00"],
+        scores: { combined:27.22,hsa: null }
+      },
+         "QHX25(D01)": {
+        name: "Văn hóa học",
+        combs: ["D01"],
+        scores: { combined:24.72,hsa: null }
+      },
+         "QHX25(D14,15)": {
+        name: "Văn hóa học",
+        combs: ["D14","D15"],
+        scores: { combined:25.22,hsa: null }
+      },
+        "QHX26(Khối mới)": {
         name: "Văn học",
-        combs: ["C00","D01","D09","D10","D11","D14","D15"],
+        combs: ["D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX27": {
+        "QHX26(C00)": {
+        name: "Văn học",
+        combs: ["C00"],
+        scores: { combined:27.5,hsa: null }
+      },
+        "QHX26(D01)": {
+        name: "Văn học",
+        combs: ["D01"],
+        scores: { combined:25,hsa: null }
+      },
+        "QHX26(D14,15)": {
+        name: "Văn học",
+        combs: ["D14","D15"],
+        scores: { combined:25.5,hsa: null }
+      },
+         "QHX27(Khối mới)": {
         name: "Việt Nam học",
-        combs: ["A01","D01","D09","D10","D11","D14","D15","C00"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX28": {
+        "QHX27(C00)": {
+        name: "Việt Nam học",
+        combs: ["C00"],
+        scores: { combined:26.62,hsa: null }
+      },
+        "QHX27(D01)": {
+        name: "Việt Nam học",
+        combs: ["D01"],
+        scores: { combined:24.12,hsa: null }
+      },
+        "QHX27(D14,15)": {
+        name: "Việt Nam học",
+        combs: ["D14","D15"],
+        scores: { combined:24.62,hsa: null }
+      },
+         "QHX28(Khối mới)": {
         name: "Xã hội học",
-        combs: ["A01","D01","D09","D10","D11","D14","D15","C00"],
+        combs: ["A01","D09","D10","D11"],
         scores: { combined:null,hsa: null }
       },
-         "QHX29": {
-        name: "Truyền thông đa phương ",
+         "QHX28(C00)": {
+        name: "Xã hội học",
+        combs: ["C00"],
+        scores: { combined:27,hsa: null }
+      },
+         "QHX28(D01)": {
+        name: "Xã hội học",
+        combs: ["D01"],
+        scores: { combined:24.5,hsa: null }
+      },
+         "QHX28(D14,15)": {
+        name: "Xã hội học",
+        combs: ["D14","D15"],
+        scores: { combined:25,hsa: null }
+      },
+         "QHX29(Ngành mới)": {
+        name: "Truyền thông đa phương tiện",
         combs: ["A01","D01","D09","D10","D11","D14","D15"],
         scores: { combined:null,hsa: null }
       }
