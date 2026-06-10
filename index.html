@@ -275,9 +275,34 @@ function runCoreAnalysisEngine() {
             }
             
             // So sánh xem khối này có điểm cao hơn khối trước đó không
-            if (finalThpt > bestThptScore) {
+            // ================== THUẬT TOÁN TÌM ĐIỂM CHUẨN ĐỘNG ==================
+            // Nếu điểm chuẩn là một số cố định (như TMU) thì lấy luôn. 
+            // Nếu là bảng điểm (như USSH), dò xem khối đang xét (combCode) yêu cầu mấy điểm.
+            let currentTarget = null;
+            if (typeof ind.scores.combined === 'number' || ind.scores.combined === null) {
+                currentTarget = ind.scores.combined;
+            } else if (typeof ind.scores.combined === 'object') {
+                // Dò xem khối này nằm ở nhóm nào
+                for (let key in ind.scores.combined) {
+                    if (key.includes(combCode)) {
+                        currentTarget = ind.scores.combined[key];
+                        break;
+                    }
+                }
+                // Nếu không tìm thấy trong nhóm nào, dùng điểm default (hoặc null nếu chưa có)
+                if (currentTarget === undefined) currentTarget = ind.scores.combined["default"];
+            }
+
+            // ================== SO SÁNH VÀ CHỐT KHỐI TỐI ƯU NHẤT ==================
+            // Chúng ta không chỉ so điểm thi, mà phải so "Độ chênh lệch" giữa điểm thi và điểm chuẩn của khối đó
+            let currentGap = (currentTarget !== null) ? (finalThpt - currentTarget) : finalThpt;
+            
+            // Tìm ra khối có "Độ chênh lệch" tốt nhất (Dư nhiều điểm nhất hoặc thiếu ít điểm nhất)
+            if (bestComb === "---" || currentGap > (ind.bestGap || -999)) {
                 bestThptScore = finalThpt;
                 bestComb = combCode;
+                ind.bestGap = currentGap;           // Lưu lại khoảng cách tốt nhất
+                ind.activeTarget = currentTarget;   // Lưu lại mức điểm chuẩn đang dùng để tí in ra bảng
             }
         });
         
@@ -292,17 +317,20 @@ function runCoreAnalysisEngine() {
             displayThptScore = "---";
             thptStatusHtml = `<span class="badge bg-secondary">Không đủ môn</span>`;
         } 
+       // ... (ở phần XỬ LÝ ĐIỂM THPT)
         else {
             // CÓ ĐIỂM THPT -> BẮT ĐẦU SO SÁNH VỚI ĐIỂM CHUẨN
             displayThptScore = bestThptScore.toFixed(2);
+            let targetScore = ind.activeTarget !== undefined ? ind.activeTarget : ind.scores.combined;
             
-            if (ind.scores.combined && bestThptScore >= ind.scores.combined) {
+            if (targetScore && bestThptScore >= targetScore) {
                 thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ THPT</span>`;
-            } else if (ind.scores.combined) {
-                thptStatusHtml = `<span class="badge bg-danger">THPT Thiếu ${(ind.scores.combined - bestThptScore).toFixed(2)} đ</span>`;
+            } else if (targetScore) {
+                thptStatusHtml = `<span class="badge bg-danger">THPT Thiếu ${(targetScore - bestThptScore).toFixed(2)} đ</span>`;
             } else {
                 thptStatusHtml = `<span class="badge bg-secondary">Không xét THPT</span>`;
             }
+        // ...
 
             // ================== TÍNH NĂNG MỚI: CẢNH BÁO TIÊU CHÍ PHỤ ==================
             // Nếu tạch tiêu chí phụ, chèn thêm 1 dòng cảnh báo màu vàng ngay dưới kết quả Đỗ/Trượt
@@ -342,17 +370,19 @@ function runCoreAnalysisEngine() {
             <td><strong>${code}</strong></td>
             <td class="text-primary fw-semibold">${ind.name}</td>
             <td><span class="badge bg-light text-dark border border-secondary">${bestComb}</span></td>
+            
             <td>
-                THPT: <span class="fw-bold">${displayThptScore}</span> / <span class="text-muted small">${ind.scores.combined || "---"}</span>
+                THPT: <span class="fw-bold">${displayThptScore}</span> / <span class="text-muted small">${(ind.activeTarget !== undefined ? ind.activeTarget : ind.scores.combined) || "---"}</span>
                 ${displayHsaScore}
             </td>
+            
             <td>
                 ${thptStatusHtml}
                 ${hsaStatusHtml}
             </td>
         `;
         resultsTable.appendChild(row);
-    }
-}
+    } // <-- Dấu đóng của vòng lặp for (let code in industries)
+} // <-- Dấu đóng của toàn bộ hàm runCoreAnalysisEngine
 </script>
 </html>
