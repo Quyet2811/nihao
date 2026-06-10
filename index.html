@@ -10,9 +10,51 @@
         .card { border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 12px; }
         .table-container { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
         .badge { font-size: 0.85rem; padding: 6px 10px; }
+    /* ... (các css cũ của bạn giữ nguyên) ... */
+        
+        /* CSS CHĂM CHÚT CHO NÚT ĐÓNG GÓP */
+        .btn-donate {
+            position: fixed;       /* Ép nút luôn nổi trên màn hình */
+            bottom: 30px;          /* Cách đáy màn hình 30px */
+            right: 30px;           /* Cách lề phải 30px */
+            background-color: #ff9800; /* Màu cam rực rỡ (bạn có thể đổi) */
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;   /* Bo góc tròn xoe */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            z-index: 1000;         /* Đảm bảo nút không bị bảng đè lên */
+            transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt */
+        }
+        
+        /* Hiệu ứng khi di chuột vào nút */
+        .btn-donate:hover {
+            background-color: #e68a00;
+            color: white;
+            transform: translateY(-5px); /* Nhảy lên nhẹ 5px */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
+    <a href="https://diachi-link-cua-ban.com" target="_blank" class="btn-donate">
+        ☕ Đóng góp
+    </a>
+
+    <div class="container my-4">
+        <h1 class="text-center mb-1 fw-bold text-primary">📊 HỆ THỐNG TÍNH ĐIỂM XÉT TUYỂN ĐẠI HỌC</h1>
+        ```
+
+### 💡 Hướng dẫn tinh chỉnh theo ý thích:
+1. **Chèn Link:** Bạn hãy thay đoạn `https://diachi-link-cua-ban.com` bằng đường link thực tế của bạn (Ví dụ: link Momo, link tài khoản ngân hàng, link Facebook, hoặc trang BuyMeACoffee). Nhớ giữ nguyên `target="_blank"` để khi người dùng bấm vào, nó sẽ mở sang một tab mới mà không làm mất trang tính điểm của họ.
+2. **Đổi chữ/Icon:** Bạn có thể thay chữ `☕ Đóng góp` thành bất kỳ chữ gì bạn thích (Ví dụ: `💖 Donate cho Admin`, `🍺 Mời tôi ly bia`).
+3. **Chỉnh vị trí:** Nếu bạn thấy góc dưới bên phải hơi vướng, bạn có thể sửa chữ `right: 30px;` trong CSS thành `left: 30px;` thì nút sẽ tự động chạy sang góc dưới cùng bên TRÁI.
+
+Bạn thử thêm vào và di chuột qua cái nút xem hiệu ứng "nảy lên" của nó có mượt mà không nhé!
+
+
 <div class="container my-4">
     <h1 class="text-center mb-1 fw-bold text-primary">📊 HỆ THỐNG TÍNH ĐIỂM XÉT TUYỂN ĐẠI HỌC</h1>
     <p class="text-center text-muted mb-4">Thông tin chỉ mang tính chất tham khảo</p>
