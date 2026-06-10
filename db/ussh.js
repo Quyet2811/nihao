@@ -214,7 +214,7 @@ UNIVERSITY_DATABASE["USSH"] = {
             scores: { combined: { "C00": 27.00, "D01": 24.50, "D14,D15": 25.00, "default": null }, hsa: null }
         },
         "QHX29": {
-            name: "Truyền thông đa phương tiện",
+            name: "Truyền thông đa phương tiện (Ngành mới)",
             combs: ["A01", "D01", "D14", "D15", "D09", "D10", "D11"],
             scores: { combined: null, hsa: null }
         }
