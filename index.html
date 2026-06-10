@@ -241,8 +241,7 @@ function runCoreAnalysisEngine() {
                 isPassCondition = false; 
             }
         }
-        if ( isPassCondition ) {
-
+       
         // Quét từng tổ hợp khối của ngành đó
         ind.combs.forEach(combCode => {
             const subjects = COMBINATIONS_DB[combCode]; // Tìm xem A00 gồm môn gì
@@ -281,25 +280,21 @@ function runCoreAnalysisEngine() {
                 bestComb = combCode;
             }
         });
-        }
-       // 4. HIỂN THỊ KẾT QUẢ RA BẢNG GIAO DIỆN
-        let thptStatusHtml = `<span class="badge bg-danger">Trượt</span>`;
+        
+      // 4. HIỂN THỊ KẾT QUẢ RA BẢNG GIAO DIỆN
+        let thptStatusHtml = "";
         let displayThptScore = "0.00";
 
-        // --- XỬ LÝ TRẠNG THÁI THPT ---
-        if (!isPassCondition) {
-            bestComb = "---";
-            displayThptScore = "---";
-            thptStatusHtml = `<span class="badge bg-dark" title="Điểm thành phần không đạt">Tạch điều kiện ( < ${ind.condition.min}đ )</span>`;
-        } 
-        else if (bestComb === "---" || bestThptScore === -1) {
+        // --- 1. XỬ LÝ ĐIỂM THPT ---
+        if (bestComb === "---" || bestThptScore === -1) {
+            // NẾU THIẾU ĐIỂM HOẶC TRỐNG MÔN
             bestComb = "Thiếu điểm";
             displayThptScore = "---";
             thptStatusHtml = `<span class="badge bg-secondary">Không đủ môn</span>`;
         } 
         else {
+            // CÓ ĐIỂM THPT -> BẮT ĐẦU SO SÁNH VỚI ĐIỂM CHUẨN
             displayThptScore = bestThptScore.toFixed(2);
-            let combinedTarget = ind.scores.combined || "---"; // Chống lỗi nếu trường ko có điểm chuẩn THPT
             
             if (ind.scores.combined && bestThptScore >= ind.scores.combined) {
                 thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ THPT</span>`;
@@ -308,20 +303,32 @@ function runCoreAnalysisEngine() {
             } else {
                 thptStatusHtml = `<span class="badge bg-secondary">Không xét THPT</span>`;
             }
+
+            // ================== TÍNH NĂNG MỚI: CẢNH BÁO TIÊU CHÍ PHỤ ==================
+            // Nếu tạch tiêu chí phụ, chèn thêm 1 dòng cảnh báo màu vàng ngay dưới kết quả Đỗ/Trượt
+            if (!isPassCondition) {
+                // Bộ từ điển dịch mã môn (m-toan) sang tên thật (Toán) để in ra cho đẹp
+                const subjectNames = {
+                    "m-toan": "Toán", "m-van": "Văn", "m-anh": "Anh", "m-nga": "Nga", 
+                    "m-phap": "Pháp", "m-trung": "Trung", "m-duc": "Đức", "m-nhat": "Nhật", "m-han": "Hàn",
+                    "m-ly": "Lý", "m-hoa": "Hóa", "m-sinh": "Sinh", "m-su": "Sử", "m-dia": "Địa", "m-gdktpl": "GDKTPL"
+                };
+                let subName = subjectNames[ind.condition.subject] || "Môn yêu cầu";
+                
+                thptStatusHtml += `<br><span class="badge bg-warning text-dark mt-1" style="white-space: normal; text-align: left;">
+                    ⚠️ Chú ý: Điểm ${subName} phải >= ${ind.condition.min}
+                </span>`;
+            }
         }
 
-        // --- BỔ SUNG: XỬ LÝ VÀ TÍNH ĐIỂM HSA ---
+        // --- 2. XỬ LÝ ĐIỂM HSA ---
         let displayHsaScore = "";
         let hsaStatusHtml = "";
 
-        // Chỉ tính khi: Trường có bật chức năng HSA + Ngành đó có điểm chuẩn HSA + Người dùng có nhập điểm HSA
         if (schoolData.hsaConfig && schoolData.hsaConfig.status === "active" && ind.scores.hsa && rawHsa > 0) {
             let finalHsa = schoolData.hsaConfig.calculate(rawHsa, bonusUt, certBonusThpt);
-            
-            // Tạo chuỗi hiển thị điểm HSA ở dòng dưới
             displayHsaScore = `<br><span class="text-primary small">HSA: <span class="fw-bold">${finalHsa.toFixed(2)}</span> / ${ind.scores.hsa}</span>`;
             
-            // Đánh giá Đỗ/Trượt HSA
             if (finalHsa >= ind.scores.hsa) {
                 hsaStatusHtml = `<br><span class="badge bg-success mt-1">Khả năng Đỗ HSA</span>`;
             } else {
@@ -329,7 +336,7 @@ function runCoreAnalysisEngine() {
             }
         }
 
-        // Tạo 1 dòng mới trong bảng và nhét cả 2 loại điểm vào
+        // --- 3. ĐỔ DỮ LIỆU RA DÒNG ---
         let row = document.createElement("tr");
         row.innerHTML = `
             <td><strong>${code}</strong></td>
