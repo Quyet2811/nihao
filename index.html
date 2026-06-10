@@ -208,6 +208,8 @@ function runCoreAnalysisEngine() {
 
     // Lấy điểm Ưu Tiên (KV1, KV2...)
     const bonusUt = parseFloat(document.getElementById("bonus-ut").value) || 0; 
+    // Lấy điểm HSA
+    const rawHsa = getVal("hsa");
     
     // 2. XỬ LÝ CHỨNG CHỈ NGOẠI NGỮ
     let selectedCert = document.getElementById("cert-type").value;
@@ -284,38 +286,63 @@ function runCoreAnalysisEngine() {
         let thptStatusHtml = `<span class="badge bg-danger">Trượt</span>`;
         let displayThptScore = "0.00";
 
-        // --- ĐOẠN ĐƯỢC NÂNG CẤP Ở ĐÂY ---
+        // --- XỬ LÝ TRẠNG THÁI THPT ---
         if (!isPassCondition) {
-            // NẾU BỊ CHẶN Ở TIÊU CHÍ PHỤ
             bestComb = "---";
             displayThptScore = "---";
             thptStatusHtml = `<span class="badge bg-dark" title="Điểm thành phần không đạt">Tạch điều kiện ( < ${ind.condition.min}đ )</span>`;
         } 
         else if (bestComb === "---" || bestThptScore === -1) {
-            // NẾU THIẾU ĐIỂM HOẶC TRỐNG MÔN
             bestComb = "Thiếu điểm";
             displayThptScore = "---";
             thptStatusHtml = `<span class="badge bg-secondary">Không đủ môn</span>`;
         } 
         else {
-            // NẾU XÉT ĐIỂM THÀNH CÔNG
             displayThptScore = bestThptScore.toFixed(2);
-            if (bestThptScore >= ind.scores.combined) {
-                thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ</span>`;
+            let combinedTarget = ind.scores.combined || "---"; // Chống lỗi nếu trường ko có điểm chuẩn THPT
+            
+            if (ind.scores.combined && bestThptScore >= ind.scores.combined) {
+                thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ THPT</span>`;
+            } else if (ind.scores.combined) {
+                thptStatusHtml = `<span class="badge bg-danger">THPT Thiếu ${(ind.scores.combined - bestThptScore).toFixed(2)} đ</span>`;
             } else {
-                thptStatusHtml = `<span class="badge bg-danger">Thiếu ${(ind.scores.combined - bestThptScore).toFixed(2)} đ</span>`;
+                thptStatusHtml = `<span class="badge bg-secondary">Không xét THPT</span>`;
             }
         }
-        // --- KẾT THÚC ĐOẠN NÂNG CẤP ---
 
-        // Tạo 1 dòng mới trong bảng và nhét dữ liệu vào
+        // --- BỔ SUNG: XỬ LÝ VÀ TÍNH ĐIỂM HSA ---
+        let displayHsaScore = "";
+        let hsaStatusHtml = "";
+
+        // Chỉ tính khi: Trường có bật chức năng HSA + Ngành đó có điểm chuẩn HSA + Người dùng có nhập điểm HSA
+        if (schoolData.hsaConfig && schoolData.hsaConfig.status === "active" && ind.scores.hsa && rawHsa > 0) {
+            let finalHsa = schoolData.hsaConfig.calculate(rawHsa, bonusUt, certBonusThpt);
+            
+            // Tạo chuỗi hiển thị điểm HSA ở dòng dưới
+            displayHsaScore = `<br><span class="text-primary small">HSA: <span class="fw-bold">${finalHsa.toFixed(2)}</span> / ${ind.scores.hsa}</span>`;
+            
+            // Đánh giá Đỗ/Trượt HSA
+            if (finalHsa >= ind.scores.hsa) {
+                hsaStatusHtml = `<br><span class="badge bg-success mt-1">Khả năng Đỗ HSA</span>`;
+            } else {
+                hsaStatusHtml = `<br><span class="badge bg-warning text-dark mt-1">HSA Thiếu ${(ind.scores.hsa - finalHsa).toFixed(2)} đ</span>`;
+            }
+        }
+
+        // Tạo 1 dòng mới trong bảng và nhét cả 2 loại điểm vào
         let row = document.createElement("tr");
         row.innerHTML = `
             <td><strong>${code}</strong></td>
             <td class="text-primary fw-semibold">${ind.name}</td>
             <td><span class="badge bg-light text-dark border border-secondary">${bestComb}</span></td>
-            <td><span class="fw-bold">${displayThptScore}</span> / <span class="text-muted small">${ind.scores.combined}</span></td>
-            <td>${thptStatusHtml}</td>
+            <td>
+                THPT: <span class="fw-bold">${displayThptScore}</span> / <span class="text-muted small">${ind.scores.combined || "---"}</span>
+                ${displayHsaScore}
+            </td>
+            <td>
+                ${thptStatusHtml}
+                ${hsaStatusHtml}
+            </td>
         `;
         resultsTable.appendChild(row);
     }
