@@ -368,12 +368,12 @@ function runCoreAnalysisEngine() {
                 let soDiem = Math.abs(chenhLech).toFixed(2); 
 
                 // 2. Xét các trường hợp
-                if (chenhLech >= 1) {
-                    // Dư từ 1 điểm trở lên
+                if (chenhLech >= 1.5) {
+                    // Dư từ 1.5 điểm trở lên
                     thptStatusHtml = `<span class="badge bg-success">An toàn (Dư ${soDiem} đ)</span>`;
                     
-                } else if (chenhLech >= 0 && chenhLech < 1) {
-                    // Dư nhưng dưới 1 điểm
+                } else if (chenhLech >= 0 && chenhLech < 1.5) {
+                    // Dư nhưng dưới 1.5 điểm
                     thptStatusHtml = `<span class="badge bg-warning text-dark">Hấp hối (Dư ${soDiem} đ)</span>`;
                     
                 } else if (chenhLech >= -1 && chenhLech < 0) {
