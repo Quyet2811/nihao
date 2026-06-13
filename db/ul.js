@@ -19,9 +19,7 @@ UNIVERSITY_CERTIFICATES["UL"] = {
         "102-120":{ score:10.0, text:"TOEFL iBT (Quy đổi 10.0đ )"}
         }
     }
-}
-
-// CẤU HÌNH THÔNG TIN VÀ CÔNG THỨC XÉT TUYỂN CỦA HUS
+};
 UNIVERSITY_DATABASE["UL"] = {
     name: "Trường Đại học Luật (ĐHQGHN)",
     
@@ -45,10 +43,20 @@ UNIVERSITY_DATABASE["UL"] = {
 
     // 3. Danh sách các ngành học
     industries: {
-      "QHT01": {
-        name: "Toán học",
-        combs: ["A00","A01","C01","D07","D08","X26"],
-        mainSubject: "m-toan", 
-        weight: 2,
-        scores: { combined:25.9,hsa: null }
+      "7380101": {
+        name: "Luật",
+        combs: ["A01","A07","C01","C02","C03","C04","D01","D03","D14","D15"],
+        scores: { combined:24.2,hsa: null }
       },
+      "7380107": {
+        name: "Luật Kinh tế (CTĐT Luật Kinh doanh)",
+        combs: ["A01","A07","C01","C02","C03","C04","D01","D03","D14","D15"],
+        scores: { combined:23.72,hsa: null }
+      },
+        "7380109": {
+        name: "Luật Thương mại quốc tế",
+        combs: ["A01","A07","C01","C02","C03","C04","D01","D03","D14","D15"],
+        scores: { combined:24,hsa: null }
+      }
+    }
+};
