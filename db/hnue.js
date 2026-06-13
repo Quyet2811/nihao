@@ -46,12 +46,12 @@ UNIVERSITY_DATABASE["HNUE"] = {
       },
      "7140204": {
         name: "GD công dân",
-        combs: ["X70","X74,"X78"],
+        combs: ["X70","X74","X78"],
         scores: { combined:27.67,hsa: null }
       },
      "7140205": {
         name: "GD chính trị",
-        combs: ["X70","X74,"X78"],
+        combs: ["X70","X74","X78"],
         scores: { combined:28.22,hsa: null }
       },
      "7140208": {
@@ -143,7 +143,7 @@ UNIVERSITY_DATABASE["HNUE"] = {
       "7140247": {
         name: "SP Khoa học tự nhiên",
         combs: ["A00","B00"],
-        scores: { combined:27,06,hsa: null }
+        scores: { combined:27.06,hsa: null }
       },
       "7140249": {
         name: "SP Lịch sử - Địa lí",
@@ -155,21 +155,10 @@ UNIVERSITY_DATABASE["HNUE"] = {
         combs: ["C00","D14"],
         scores: { combined:26.36,hsa: null }
       },
-      "00": {
-        name: "000",
-        combs: ["C03","C04"],
-        scores: { combined:null,hsa: null }
-      },
       "7220201": {
         name: "Ngôn ngữ Anh",
         combs: ["D01"],
         scores: { combined:24.52,hsa: null }
-      },
-
-      "00": {
-        name: "000",
-        combs: ["C03","C04"],
-        scores: { combined:null,hsa: null }
       },
       "7220203": {
         name: "Ngôn ngữ Pháp(Tiếng Pháp ứng dụng và giao tiếp quốc tế)(bắt đầu tuyển sinh từ 2026)",
