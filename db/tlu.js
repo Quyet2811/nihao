@@ -91,7 +91,7 @@ UNIVERSITY_DATABASE["TLU"] = {
             combs: ["D01","D07","X25","A00","A01","X01"],
             scores: {combined:20.6,hsa: null }
         },
-        "7220201": {
+        "7310630": {
             name: "Việt Nam học",
             combs: ["D01","D14","D15","C00","C03","C04"],
             scores: {combined:21.88,hsa: null }
