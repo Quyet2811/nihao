@@ -349,7 +349,7 @@ function runCoreAnalysisEngine() {
             // NẾU THIẾU ĐIỂM HOẶC TRỐNG MÔN
             bestComb = "Thiếu điểm";
             displayThptScore = "---";
-            thptStatusHtml = `<span class="badge bg-secondary">Không đủ môn</span>`;
+            thptStatusHtml = `<span class="badge bg-secondary">Không xét được</span>`;
         } 
        // ... (ở phần XỬ LÝ ĐIỂM THPT)
         else {
@@ -357,12 +357,34 @@ function runCoreAnalysisEngine() {
             displayThptScore = bestThptScore.toFixed(2);
             let targetScore = ind.activeTarget !== undefined ? ind.activeTarget : ind.scores.combined;
             
-            if (targetScore && bestThptScore >= targetScore) {
-                thptStatusHtml = `<span class="badge bg-success">Khả năng Đỗ THPT</span>`;
-            } else if (targetScore) {
-                thptStatusHtml = `<span class="badge bg-danger">THPT Thiếu ${(targetScore - bestThptScore).toFixed(2)} đ</span>`;
+           if (targetScore) {
+                // 1. Tính độ chênh lệch
+                let chenhLech = bestThptScore - targetScore;
+                
+                // Hàm Math.abs() giúp biến số âm thành số dương (VD: -0.5 -> 0.5) để in ra chữ cho đẹp
+                let soDiem = Math.abs(chenhLech).toFixed(2); 
+
+                // 2. Xét các trường hợp
+                if (chenhLech >= 1) {
+                    // Dư từ 1 điểm trở lên
+                    thptStatusHtml = `<span class="badge bg-success">An toàn (Dư ${soDiem} đ)</span>`;
+                    
+                } else if (chenhLech >= 0 && chenhLech < 1) {
+                    // Dư nhưng dưới 1 điểm
+                    thptStatusHtml = `<span class="badge bg-warning text-dark">Hấp hối (Dư ${soDiem} đ)</span>`;
+                    
+                } else if (chenhLech >= -1 && chenhLech < 0) {
+                    // Thiếu nhưng dưới 1 điểm
+                    thptStatusHtml = `<span class="badge bg-warning text-dark">Hấp hối (Thiếu ${soDiem} đ)</span>`;
+                    
+                } else {
+                    // Thiếu từ 1 điểm trở lên
+                    thptStatusHtml = `<span class="badge bg-danger">Nguy hiểm (Thiếu ${soDiem} đ)</span>`;
+                }
+                
             } else {
-                thptStatusHtml = `<span class="badge bg-secondary">Không xét THPT</span>`;
+                // Trường hợp ngành đó không có điểm chuẩn THPT (targetScore = null)
+                thptStatusHtml = `<span class="badge bg-secondary">Chưa có điểm THPT</span>`;
             }
         // ...
 
