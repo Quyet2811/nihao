@@ -57,7 +57,7 @@ UNIVERSITY_DATABASE["HNUE"] = {
      "7140208": {
         name: "GD Quốc phòng và An ninh",
         combs: ["C03","C04"],
-        scores: { combined:null,hsa: null }
+        scores: { combined:27.27,hsa: null }
       },
      "7140209": {
         name: "SP Toán học",
@@ -76,12 +76,12 @@ UNIVERSITY_DATABASE["HNUE"] = {
      "7140210": {
         name: "SP Tin học",
         combs: ["A01","X06"],
-        scores: { combined:24.58,hsa: null }
+        scores: { combined:24.85,hsa: null }
       },
      "7140210K": {
         name: "SP Tin học(dạy Tin học bằng tiếng Anh)",
         combs: ["A01","X06"],
-        scores: { combined:24.58,hsa: null }
+        scores: { combined:null,hsa: null }
       },
      "7140211": {
         name: "SP Vật lí",
@@ -247,9 +247,9 @@ UNIVERSITY_DATABASE["HNUE"] = {
         scores: { combined:23,hsa: null }
       },
       "7440112D": {
-        name: "Hóa học(Hóa dược)(bắt đầu tuyển sinh từ 2026)",
+        name: "Hóa học(Hóa dược)",
         combs: ["A00","B00","D07"],
-        scores: { combined:null,hsa: null }
+        scores: { combined:23,hsa: null }
       },
       "7460101": {
         name: "Toán học",
