@@ -1,5 +1,44 @@
 UNIVERSITY_CERTIFICATES["UED"] = {
-    
+    "IELTS": {
+        lang: "m-anh", 
+        levels: {
+            "5.5": { score: 8.0, text: "IELTS 5.5 (Quy đổi 8.0đ)" },
+            "6.0": { score: 8.5, text: "IELTS 6.0 (Quy đổi 8.5đ)" },
+            "6.5": { score: 9.0, text: "IELTS 6.5 (Quy đổi 9.0đ)" },
+            "7.0": { score: 9.5, text: "IELTS 7.0 (Quy đổi 9.5đ)" },
+            "7.5":{ score: 10.0, text:" IELTS >= 7.5 (Quy đổi 10đ)" }
+        }
+    },
+    "TOEFL iBT": {
+        lang: "m-anh",
+        levels: { 
+            "72-78": { score: 8.0, text: "TOEFL iBT 72-78 (Quy đổi 8.0đ)" },
+            "79-87": { score: 8.5, text: "TOEFL iBT 79-87 (Quy đổi 8.5đ)" },
+            "88-95": { score: 9.0, text: "TOEFL iBT 88-95 (Quy đổi 9.0đ)" },
+            "96-101": { score: 9.5, text: "TOEFL iBT 96-101 (Quy đổi 9.5đ)" },
+            "102-120": { score: 10, text: "TOEFL iBT 102-120 (Quy đổi 10đ)" }
+        }
+    },
+    "VSTEP (Tiếng anh)": {
+        lang: "m-anh",
+        levels: { 
+            "6": { score: 8.0, text: "VSTEP 6 (Quy đổi 8.0đ)" },
+            "6.5": { score: 8.5, text: "VSTEP 6.5 (Quy đổi 8.5đ)" },
+            "7-7.5": { score: 9.0, text: "VSTEP 7-7.5 (Quy đổi 9.0đ)" },
+            "8": { score: 9.5, text: "VSTEP 8 (Quy đổi 9.5đ)" },
+            "8.5-10": { score: 10, text: "VSTEP 8.5-10 (Quy đổi 10đ)" }
+        }
+    },
+    "HSK và HSKK": {
+        lang: "m-trung",
+        levels: { 
+            "HSK 4(180-220)": { score: 8.0, text: "HSK4 (180-220) và HSKK Trung cấp (Quy đổi 8.0đ)" },
+            "HSK 4(221-260)": { score: 8.5, text: "HSK4 (221-260) và HSKK Trung cấp (Quy đổi 8.5đ)" },
+            "HSK 4(261-300)": { score: 9.0, text: "HSK4 (261-300) và HSKK Trung cấp (Quy đổi 9.0đ)" },
+            "HSK 5": { score: 9.5, text: "HSK5 và HSKK Cao cấp (Quy đổi 9.5đ)" },
+            "HSK 6": { score: 10, text: "HSK6 và HSKK Cao cấp (Quy đổi 10đ)" }
+        }
+    }
 };
 UNIVERSITY_DATABASE["UED"] = {
     name: "Trường Đại học Giáo dục (ĐHQGHN)",
