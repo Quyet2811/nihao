@@ -25,7 +25,7 @@ UNIVERSITY_CERTIFICATES["HUS"] = {
 
 // CẤU HÌNH THÔNG TIN VÀ CÔNG THỨC XÉT TUYỂN CỦA HUS
 UNIVERSITY_DATABASE["HUS"] = {
-    name: "Đại học Khoa học Tự nhiên (ĐHQGHN)",
+    name: "Trường Đại học Khoa học Tự nhiên (ĐHQGHN)",
     
     // 1. Báo trạng thái HSA đang chờ cập nhật
     hsaConfig: {
