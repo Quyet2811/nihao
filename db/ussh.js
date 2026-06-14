@@ -51,7 +51,7 @@ UNIVERSITY_CERTIFICATES["USSH"] = {
     }
 };
 UNIVERSITY_DATABASE["USSH"] = {
-    name: "Đại học Khoa học Xã hội và Nhân văn (ĐHQGHN)",
+    name: "Trường Đại học Khoa học Xã hội và Nhân văn (ĐHQGHN)",
     
     // 1. Báo trạng thái HSA đang chờ cập nhật
     hsaConfig: {
