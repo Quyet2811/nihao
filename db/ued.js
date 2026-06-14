@@ -1,4 +1,4 @@
-UNIVERSITY_CERTIFICATES["UL"] = {
+UNIVERSITY_CERTIFICATES["UED"] = {
     "IELTS": {
         lang: "m-anh", 
         levels: {
@@ -20,8 +20,8 @@ UNIVERSITY_CERTIFICATES["UL"] = {
         }
     }
 };
-UNIVERSITY_DATABASE["UL"] = {
-    name: "Trường Đại học Luật (ĐHQGHN)",
+UNIVERSITY_DATABASE["UED"] = {
+    name: "Trường Đại học Giáo dục (ĐHQGHN)",
     
     // 1. Báo trạng thái HSA đang chờ cập nhật
     hsaConfig: {
