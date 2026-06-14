@@ -1,4 +1,4 @@
-UNIVERSITY_CERTIFICATES["HUS"] = {
+UNIVERSITY_CERTIFICATES["UET"] = {
     "IELTS": {
         lang: "m-anh", 
         levels: {
@@ -19,36 +19,120 @@ UNIVERSITY_CERTIFICATES["HUS"] = {
         "102-120":{ score:10.0, text:"TOEFL iBT (Quy đổi 10.0đ )"}
         }
     }
-}
-
-// CẤU HÌNH THÔNG TIN VÀ CÔNG THỨC XÉT TUYỂN CỦA HUS
-UNIVERSITY_DATABASE["HUS"] = {
-    name: "Đại học Khoa học Tự nhiên (ĐHQGHN)",
-    
-    // 1. Báo trạng thái HSA đang chờ cập nhật
+};
+UNIVERSITY_DATABASE["UET"] = {
+    name: "Trường Đại học Công nghệ (ĐHQGHN)",
     hsaConfig: {
         status: "updating", 
         calculate: function(rawHsa, bonusUt, certBonus) {
-            // Do chưa có barem chính thức năm nay nên tạm thời trả về 0
             return 0; 
         }
     },
-
-    // 2. Định nghĩa công thức tính điểm THPT ĐẶC THÙ cho riêng HUS
-    // Nếu các trường khác không có block này, hệ thống sẽ tự dùng công thức mặc định
     thptConfig: {
         calculate: function(totalThreeSubjects, actualBonusUt, certBonusThpt) {
-            // Với HUS, điểm xét tuyển bằng Tổng 3 môn + Ưu tiên + Điểm cộng từ chứng chỉ (bonus)
             return totalThreeSubjects + actualBonusUt + certBonusThpt;
         }
     },
-
-    // 3. Danh sách các ngành học
     industries: {
-      "QHT01": {
-        name: "Toán học",
-        combs: ["A00","A01","C01","D07","D08","X26"],
-        mainSubject: "m-toan", 
-        weight: 2,
-        scores: { combined:25.9,hsa: null }
+      "CN01": {
+        name: "Công nghệ thông tin",
+        combs: ["A00","A01","X06"],
+        scores: { combined:28.19,hsa: null }
       },
+        "CN02": {
+        name: "Kỹ thuật máy tính",
+        combs: ["A00","A01","X06"],
+        scores: { combined:27,hsa: null }
+      },
+        "CN03": {
+        name: "Vật lý kỹ thuật",
+        combs: ["A00","A01","X06"],
+        scores: { combined:25.2,hsa: null }
+      },
+        "CN04": {
+        name: "Cơ kỹ thuật",
+        combs: ["A00","A01","X06"],
+        scores: { combined:26.15,hsa: null }
+      },
+        "CN05": {
+        name: "Công nghệ kỹ thuật xây dựng",
+        combs: ["A00","A01","X06"],
+        scores: { combined:22.25,hsa: null }
+      },
+        "CN06": {
+        name: "Công nghệ kỹ thuật cơ - điện tử",
+        combs: ["A00","A01","X06"],
+        scores: { combined:26.73,hsa: null }
+      },
+        "CN07": {
+        name: "Công nghệ hàng không vũ trụ",
+        combs: ["A00","A01","X06"],
+        scores: { combined:23.96,hsa: null }
+      },
+        "CN08": {
+        name: "Khoa học máy tính",
+        combs: ["A00","A01","X06"],
+        scores: { combined:27.86,hsa: null }
+      },
+        "CN09": {
+        name: "Công nghệ kỹ thuật điện tử – viễn thông",
+        combs: ["A00","A01","X06"],
+        scores: { combined:26.63,hsa: null }
+      },
+        "CN10": {
+        name: "Công nghệ nông nghiệp",
+        combs: ["A00","A01","X06","A02"],
+        scores: { combined:22,hsa: null }
+      },
+        "CN11": {
+        name: "Kỹ thuật điều khiển và tự động hoá",
+        combs: ["A00","A01","X06"],
+        scores: { combined:27.9,hsa: null }
+      },
+        "CN12": {
+        name: "Trí tuệ nhân tạo",
+        combs: ["A00","A01","X06"],
+        scores: { combined:27.75,hsa: null }
+      },
+        "CN13": {
+        name: "Kỹ thuật năng lượng",
+        combs: ["A00","A01","X06"],
+        scores: { combined:24.87,hsa: null }
+      },
+        "CN14": {
+        name: "Hệ thống thông tin",
+        combs: ["A00","A01","X06"],
+        scores: { combined:26.38,hsa: null }
+      },
+        "CN15": {
+        name: "Mạng máy tính và truyền thông dữ liệu",
+        combs: ["A00","A01","X06"],
+        scores: { combined:26.73,hsa: null }
+      },
+        "CN17": {
+        name: "Kỹ thuật Robot* ",
+        combs: ["A00","A01","X06"],
+        scores: { combined:26,hsa: null }
+      },
+        "CN18": {
+        name: "Thiết kế công nghiệp và Đồ họa",
+        combs: ["A00","A01","X06"],
+        scores: { combined:24.2,hsa: null }
+      },
+        "CN19": {
+        name: "Công nghệ vật liệu (Chương trình Công nghệ vật liệu và Vi điện tử) ",
+        combs: ["A00","A01","X06"],
+        scores: { combined:25.6,hsa: null }
+      },
+        "CN20": {
+        name: "Khoa học dữ liệu (Chương trình Khoa học và Kỹ thuật dữ liệu)",
+        combs: ["A00","A01","X06"],
+        scores: { combined:27.38,hsa: null }
+      },
+        "CN21": {
+        name: "Công nghệ sinh học (Chương trình Công nghệ kỹ thuật sinh học) ",
+        combs: ["A00","A01","X06","A02"],
+        scores: { combined:22.13,hsa: null }
+      }
+    }
+};
