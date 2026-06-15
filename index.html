@@ -125,15 +125,16 @@
                         <thead class="table-light">
                             <tr>
                                 <th style="width: 10%">Mã</th>
-                                <th style="width: 30%">Tên Ngành</th>
+                                <th style="width: 25%">Tên Ngành</th>
                                 <th style="width: 15%">Khối Tối Ưu</th>
-                                <th style="width: 25%">Điểm Bạn / Điểm Chuẩn</th>
-                                <th style="width: 20%">Trạng Thái</th>
+                                <th style="width: 20%">Điểm Bạn / Điểm Chuẩn</th>
+                                <th style="width: 15%">Trạng Thái</th>
+                                <th style="width: 15%">Ghi chú</th>
                             </tr>
                         </thead>
                         <tbody id="results-tbody">
                             <tr>
-                                <td colspan="5" class="text-center text-muted py-5">
+                                <td colspan="6" class="text-center text-muted py-5">
                                     Vui lòng nhập điểm và ấn "Tiến hành phân tích" để xem kết quả.
                                 </td>
                             </tr>
@@ -427,6 +428,7 @@ function runCoreAnalysisEngine() {
         }
 
         // --- 3. ĐỔ DỮ LIỆU RA DÒNG ---
+        let noteHtml = ind.note ? `<span class="small text-muted">${ind.note}</span>` : "";
         let row = document.createElement("tr");
         row.innerHTML = `
             <td><strong>${code}</strong></td>
@@ -441,6 +443,10 @@ function runCoreAnalysisEngine() {
             <td>
                 ${thptStatusHtml}
                 ${hsaStatusHtml}
+            </td>
+
+            <td>
+                ${noteHtml}
             </td>
         `;
         resultsTable.appendChild(row);
