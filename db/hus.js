@@ -52,28 +52,32 @@ UNIVERSITY_DATABASE["HUS"] = {
         combs: ["A00","A01","C01","D07","D08","X26"],
         mainSubject: "m-toan", 
         weight: 2,
-        scores: { combined:25.9,hsa: null }
+        scores: { combined:25.9,hsa: null },
+        note: "Toán nhân hệ số 2"
       },
       "QHT02": {
         name: "Toán tin",
         combs: ["A00","A01","C01","D07","D08","X26"],
         mainSubject: "m-toan", 
         weight: 2,
-        scores: { combined:25.5,hsa: null }
+        scores: { combined:25.5,hsa: null },
+        note: "Toán nhân hệ số 2"
       },
       "QHT98": {
         name: "Khoa học máy tính và thông tin",
         combs: ["A00","A01","C01","D07","D08","X26"],
         mainSubject: "m-toan", 
         weight: 2,
-        scores: { combined:25.35,hsa: null }
+        scores: { combined:25.35,hsa: null },
+        note: "Toán nhân hệ số 2"
       },
       "QHT93": {
         name: "Khoa học dữ liệu",
         combs: ["A00","A01","C01","D07","D08","X26"],
         mainSubject: "m-toan", 
         weight: 2,
-        scores: { combined:26.0,hsa: null }
+        scores: { combined:26.0,hsa: null },
+        note: "Toán nhân hệ số 2"
       },
       "QHT03": {
         name: " Vật lý học",
