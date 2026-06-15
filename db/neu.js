@@ -34,13 +34,5 @@ UNIVERSITY_DATABASE["NEU"] = {
         }
     },
     industries: {
-      "ACT01": {
-        name: "Chất lượng cao Kế toán",
-        combs: ["A01","D09","D01","D07"],
-        mainSubject: "m-toan", 
-        weight: 2,
-        scores: { combined:21.57,hsa: 88 },
-        note: "Toán nhân hệ số 2"
-      }
     }
 };
