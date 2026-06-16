@@ -22,10 +22,10 @@ UNIVERSITY_CERTIFICATES["BAV"] = {
 };
 UNIVERSITY_DATABASE["BAV"] = {
     name: "Học viện Ngân hàng (BAV)",
-    hsaConfig: {
-        status: "updating", 
+   hsaConfig: {
+        status: "active", 
         calculate: function(rawHsa, bonusUt, certBonus) {
-            return 0; 
+            return rawHsa; 
         }
     },
     thptConfig: {
