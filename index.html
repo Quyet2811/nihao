@@ -255,17 +255,17 @@ function runCoreAnalysisEngine() {
     // 2. XỬ LÝ CHỨNG CHỈ NGOẠI NGỮ
     let selectedCert = document.getElementById("cert-type").value;
     let certBonusThpt = 0;
-    
+    let certLangSubject = null;
+    let certConvertedScore = 0; // TẠO BIẾN MỚI: Lưu điểm quy đổi nhưng khoan hãy dùng
+
     if (selectedCert) {
         const [certName, certLevel] = selectedCert.split("|"); // Cắt chuỗi "IELTS|5.5" ra
         const schoolCertConfig = UNIVERSITY_CERTIFICATES[schoolKey]?.[certName]?.levels?.[certLevel];
-        const certLangSubject = UNIVERSITY_CERTIFICATES[schoolKey]?.[certName]?.lang;
+        certLangSubject = UNIVERSITY_CERTIFICATES[schoolKey]?.[certName]?.lang;
 
         if (schoolCertConfig && certLangSubject) {
-            // Nếu điểm quy đổi cao hơn điểm thi thật thì ghi đè điểm ngoại ngữ
-            if (schoolCertConfig.score > userScores[certLangSubject]) {
-                userScores[certLangSubject] = schoolCertConfig.score;
-            }
+            // Chỉ cất điểm quy đổi vào biến tạm, KHÔNG ghi đè vào userScores ở đây nữa
+            certConvertedScore = schoolCertConfig.score;
             // Lấy điểm cộng thêm (bonus) nếu có
             certBonusThpt = schoolCertConfig.bonus || 0;
         }
@@ -282,22 +282,40 @@ function runCoreAnalysisEngine() {
                 isPassCondition = false; 
             }
         }
-       
+        
         // Quét từng tổ hợp khối của ngành đó
         ind.combs.forEach(combCode => {
             const subjects = COMBINATIONS_DB[combCode]; // Tìm xem A00 gồm môn gì
             if (!subjects) return; // Nếu khối lạ không có trong database thì bỏ qua
 
-            // Nếu bị điểm liệt (hoặc không nhập điểm) 1 trong 3 môn của khối -> Loại
-            if (userScores[subjects[0]] === 0 || userScores[subjects[1]] === 0 || userScores[subjects[2]] === 0) return;
-
-            let totalThreeSubjects = userScores[subjects[0]] + userScores[subjects[1]] + userScores[subjects[2]];
+            // ---> TỪ ĐÂY XUỐNG ĐẾN HẾT PHẦN TÍNH HỆ SỐ 2 LÀ PHẦN BẠN CẦN THAY THẾ <---
             
-            // Xử lý ngành có môn chính nhân hệ số 2
+            // 1. Lấy điểm thi thật của 3 môn cất vào một bộ nhớ tạm (currentScores)
+            let currentScores = {
+                [subjects[0]]: userScores[subjects[0]],
+                [subjects[1]]: userScores[subjects[1]],
+                [subjects[2]]: userScores[subjects[2]]
+            };
+
+            // 2. LOGIC MỚI: MẶC ĐỊNH LUÔN QUY ĐỔI (Trừ khi bị cấm)
+            // - Nếu chứng chỉ và môn học hợp lệ
+            // - VÀ ngành này KHÔNG có cờ cấm quy đổi (disableCertOverwrite !== true)
+            if (certLangSubject && subjects.includes(certLangSubject) && ind.disableCertOverwrite !== true) {
+                if (certConvertedScore > currentScores[certLangSubject]) {
+                    currentScores[certLangSubject] = certConvertedScore; // Ghi đè điểm môn ngoại ngữ
+                }
+            }
+
+            // 3. Nếu bị điểm liệt 1 trong 3 môn (Sử dụng currentScores thay vì userScores)
+            if (currentScores[subjects[0]] === 0 || currentScores[subjects[1]] === 0 || currentScores[subjects[2]] === 0) return;
+
+            let totalThreeSubjects = currentScores[subjects[0]] + currentScores[subjects[1]] + currentScores[subjects[2]];
+            
+            // 4. Xử lý ngành có môn chính nhân hệ số 2
             if (ind.mainSubject && ind.weight === 2 && subjects.includes(ind.mainSubject)) {
-                let mainScore = userScores[ind.mainSubject];
+                let mainScore = currentScores[ind.mainSubject];
                 let otherSubjects = subjects.filter(s => s !== ind.mainSubject);
-                let totalOthers = userScores[otherSubjects[0]] + userScores[otherSubjects[1]];
+                let totalOthers = currentScores[otherSubjects[0]] + currentScores[otherSubjects[1]];
                 totalThreeSubjects = (mainScore * 2 + totalOthers) * 3 / 4; 
             }
 
@@ -307,12 +325,30 @@ function runCoreAnalysisEngine() {
                 actualBonusUt = ((30 - totalThreeSubjects) / 7.5) * bonusUt;
             }
 
-            // Tính tổng điểm cuối cùng. (Ưu tiên dùng thptConfig của trường nếu có)
+            // ================== LOGIC TÍNH ĐIỂM KHUYẾN KHÍCH ==================
+            let currentCertBonus = 0; 
+            let isDoubleBonusAllowed = UNIVERSITY_CERTIFICATES[schoolKey]?.allowDoubleBonus || false;
+            
+            if (selectedCert && certLangSubject) {
+                if (subjects.includes(certLangSubject)) {
+                    // Khối CÓ môn NN: Chỉ cộng KK nếu trường cho phép (allowDoubleBonus) VÀ ngành không cấm quy đổi
+                    if ( ind.disableCertOverwrite === true) {
+                        currentCertBonus = certBonusThpt; 
+                    } else {
+                        currentCertBonus = isDoubleBonusAllowed ? certBonusThpt : 0;
+                    }
+                } else {
+                    // Khối KHÔNG CÓ môn NN: Luôn được cộng điểm KK
+                    currentCertBonus = certBonusThpt;
+                }
+            }
+
+            // Tính tổng điểm cuối cùng. (Sử dụng currentCertBonus)
             let finalThpt;
             if (schoolData.thptConfig) {
-                finalThpt = schoolData.thptConfig.calculate(totalThreeSubjects, actualBonusUt, certBonusThpt);
+                finalThpt = schoolData.thptConfig.calculate(totalThreeSubjects, actualBonusUt, currentCertBonus);
             } else {
-                finalThpt = totalThreeSubjects + actualBonusUt + certBonusThpt;
+                finalThpt = totalThreeSubjects + actualBonusUt + currentCertBonus;
             }
             
             // So sánh xem khối này có điểm cao hơn khối trước đó không
@@ -421,7 +457,7 @@ function runCoreAnalysisEngine() {
             displayHsaScore = `<br><span class="text-primary small">HSA: <span class="fw-bold">${finalHsa.toFixed(2)}</span> / ${ind.scores.hsa}</span>`;
             
             if (finalHsa >= ind.scores.hsa) {
-                hsaStatusHtml = `<br><span class="badge bg-success mt-1">HSA dư ${(ind.scores.hsa - finalHsa).toFixed(2)} đ</span>`;
+                hsaStatusHtml = `<br><span class="badge bg-success mt-1">Khả năng Đỗ HSA</span>`;
             } else {
                 hsaStatusHtml = `<br><span class="badge bg-warning text-dark mt-1">HSA Thiếu ${(ind.scores.hsa - finalHsa).toFixed(2)} đ</span>`;
             }
