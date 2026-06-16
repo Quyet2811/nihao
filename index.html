@@ -421,7 +421,7 @@ function runCoreAnalysisEngine() {
             displayHsaScore = `<br><span class="text-primary small">HSA: <span class="fw-bold">${finalHsa.toFixed(2)}</span> / ${ind.scores.hsa}</span>`;
             
             if (finalHsa >= ind.scores.hsa) {
-                hsaStatusHtml = `<br><span class="badge bg-success mt-1">Khả năng Đỗ HSA</span>`;
+                hsaStatusHtml = `<br><span class="badge bg-success mt-1">HSA dư ${(ind.scores.hsa - finalHsa).toFixed(2)} đ</span>`;
             } else {
                 hsaStatusHtml = `<br><span class="badge bg-warning text-dark mt-1">HSA Thiếu ${(ind.scores.hsa - finalHsa).toFixed(2)} đ</span>`;
             }
