@@ -23,9 +23,9 @@ UNIVERSITY_CERTIFICATES["NEU"] = {
 UNIVERSITY_DATABASE["NEU"] = {
     name: "Đại học Kinh tế Quốc dân (NEU)",
     hsaConfig: {
-        status: "updating", 
+        status: "active", 
         calculate: function(rawHsa, bonusUt, certBonus) {
-            return 0; 
+            return rawHsa; 
         }
     },
     thptConfig: {
@@ -34,5 +34,6 @@ UNIVERSITY_DATABASE["NEU"] = {
         }
     },
     industries: {
+        
     }
 };
