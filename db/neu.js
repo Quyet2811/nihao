@@ -289,182 +289,182 @@ UNIVERSITY_DATABASE["NEU"] = {
         "7480202": {
         name: "An toàn thông tin",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.59,hsa:100.13 },
         note: "..."
       },
         "7340204": {
         name: "Bảo hiểm",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.75,hsa: 94.25 },
         note: "..."
       },
         "7340116": {
         name: "Bất động sản",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.41,hsa: 98.87 },
         note: "..."
       },
         "7480201": {
         name: "Công nghệ thông tin",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.89,hsa: 102.23 },
         note: "..."
       },
         "7480104": {
         name: "Hệ thống thông tin",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.38,hsa: 105.09 },
         note: "..."
       },
         "7340405": {
         name: "Hệ thống thông tin quản lý",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:27.5,hsa: 111.25 },
         note: "..."
       },
         "7340301": {
         name: "Kế toán",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:27.1,hsa: 109.05 },
         note: "..."
       },
         "7480101": {
         name: "Khoa học máy tính",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.27,hsa:104.49 },
         note: "..."
       },
         "7340401": {
         name: "Khoa học quản lý",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.06,hsa: 103.33 },
         note: "..."
       },
         "7340302": {
         name: "Kiểm toán",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.38,hsa: 116.66 },
         note: "..."
       },
         "7620114": {
         name: "Kinh doanh nông nghiệp",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:23.75,hsa: 88.5 },
         note: "..."
       },
         "7340120": {
         name: "Kinh doanh quốc tế",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.6,hsa:118.2 },
         note: "..."
       },
         "7340121": {
         name: "Kinh doanh thương mại",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28,hsa: 114 },
         note: "..."
       },
         "7310104": {
         name: "Kinh tế đầu tư",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:27.5,hsa:111.25 },
         note: "..."
       },
         "7310101_1": {
         name: "Kinh tế học",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.52,hsa: 105.86 },
         note: "..."
       },
         "7620115": {
         name: "Kinh tế nông nghiệp",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.35,hsa:91.45 },
         note: "..."
       },
         "7310105": {
         name: "Kinh tế phát triển",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.77,hsa: 107.24 },
         note: "..."
       },
         "7310106": {
         name: "Kinh tế quốc tế",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.13,hsa: 114.91 },
         note: "..."
       },
         "7850102": {
         name: "Kinh tế tài nguyên thiên nhiên",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:23.5,hsa: 88 },
         note: "..."
       },
         "7310101_2": {
         name: "Kinh tế và quản lý đô thị",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.8,hsa: 101.6 },
         note: "..."
       },
         "7310101_3": {
         name: "Kinh tế và quản lý nguồn nhân lực",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.79,hsa: 107.35 },
         note: "..."
       },
         "7510605": {
         name: "Logistics và Quản lý chuỗi cung ứng",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.61,hsa: 118.27 },
         note: "..."
       },
         "7380101": {
         name: "Luật",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.96,hsa:102.72 },
         note: "..."
       },
         "7380107": {
         name: "Luật kinh tế",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.75,hsa: 107.13 },
         note: "..."
       },
         "7380109": {
         name: "Luật thương mại quốc tế",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.44,hsa: 105.42 },
         note: "..."
       },
         "7340115": {
         name: "Marketing",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.12,hsa: 114.84 },
         note: "..."
       },
         "7220201": {
         name: "Ngôn ngữ Anh",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.51,hsa: 105.81 },
         note: "..."
       },
         "7320108": {
         name: "Quan hệ công chúng",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.07,hsa: 114.49 },
         note: "..."
       },
 
         "7340408": {
         name: "Quan hệ lao động",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25,hsa:96 },
         note: "..."
       },
         "7340403": {
         name: "Quản lý công",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.42,hsa: 98.94 },
         note: "..."
       },
         "7850103": {
@@ -476,151 +476,151 @@ UNIVERSITY_DATABASE["NEU"] = {
         "7340409": {
         name: "Quản lý dự án",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.63,hsa: 106.46 },
         note: "..."
       },
         "7850101": {
         name: "Quản lý tài nguyên và môi trường",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.17,hsa: 90.19 },
         note: "..."
       },
         "7810103": {
         name: "Quản trị dịch vụ du lịch và lữ hành",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.06,hsa: 103.33 },
         note: "..."
       },
         "7810201": {
         name: "Quản trị khách sạn",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.25,hsa:104.38  },
         note: "..."
       },
         "7340101": {
         name: "Quản trị kinh doanh",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:27.1,hsa: 109.05 },
         note: "..."
       },
         "7340404": {
         name: "Quản trị nhân lực",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:27.1,hsa: 109.05 },
         note: "..."
       },
         "7340201": {
         name: "Tài chính - Ngân hàng",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:27.34,hsa: 110.37 },
         note: "..."
       },
         "7310107": {
         name: "Thống kê kinh tế",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.79,hsa: 107.35 },
         note: "..."
       },
-        "7340121": {
+        "7340122": {
         name: "Thương mại điện tử",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:28.83,hsa: 119.81 },
         note: "..."
       },
         "7310108": {
         name: "Toán kinh tế",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.73,hsa: 107.02 },
         note: "..."
       },
         "TT1_7340301": {
         name: "Kế toán - CT tiên tiến TT1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.75,hsa: 94.25 },
         note: "..."
       },
         "TT1_7340201": {
         name: "Kế hoạch tài chính - CT tiên tiến TT1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.75,hsa: 94.25 },
         note: "..."
       },
         "TT1_7340101": {
         name: "Quản trị kinh doanh - CT tiên tiến TT1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.75,hsa: 94.25 },
         note: "..."
       },
         "TT2_7340201": {
         name: "Tài chính - CT tiên tiến TT2",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.5,hsa: 99.5 },
         note: "..."
       },
         "TT2_7340120": {
         name: "Kinh doanh quốc tế - CT tiên tiến TT2",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.5,hsa: 99.5 },
         note: "..."
       },
         "CLC1_7310105": {
         name: "Kinh tế phát triển - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.25,hsa: 97.75 },
         note: "..."
       },
         "CLC1_7340201": {
         name: "Ngân hàng - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.25,hsa: 97.75 },
         note: "..."
       },
         "CLC1_7380201": {
         name: "Công nghệ thông tin và chuyển đổi số - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.25,hsa: 97.75 },
         note: "..."
       },
         "CLC1_7340204": {
         name: "Bảo hiểm tích hợp chứng chỉ ANZ1IF - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:25.25,hsa: 97.75 },
         note: "..."
       },
         "CLC2_7310104": {
         name: "Kinh tế Đầu tư - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.5,hsa: 105.75 },
         note: "..."
       },
         "CLC2_7340404": {
         name: "Quản trị nhân lực - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.5,hsa: 105.75 },
         note: "..."
       },
         "CLC2_7340101": {
         name: "Quản trị Kinh doanh - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.5,hsa: 105.75 },
         note: "..."
       },
         "CLC2_7320108": {
         name: "Quan hệ công chúng - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.5,hsa: 105.75 },
         note: "..."
       },
         "CLC3_7340201": {
         name: "Tài chính doanh nghiệp - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       },
         "CLC3_7340115": {
         name: "Digital Marketing (Marketing số) - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       },
         "CLC3_7340115": {
@@ -632,31 +632,31 @@ UNIVERSITY_DATABASE["NEU"] = {
         "CLC3_7340120": {
         name: "Quản trị Kinh doanh quốc tế - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       },
         "CLC3_7310106": {
         name: "Kinh tế quốc tế - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       },
         "CLC3_7510605": {
         name: "Logistics và Quản lý chuỗi cung ứng - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       },
         "CLC3_7340112": {
         name: "Thương mại điện tử - CT chất lượng cao CLC3	",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       },
         "CLC3_7340302": {
         name: "Kiểm toán tích hợp chứng chỉ ACCA - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:26.42,hsa: 105.31 },
         note: "..."
       }
     }
