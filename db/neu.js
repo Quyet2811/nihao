@@ -38,626 +38,626 @@ UNIVERSITY_DATABASE["NEU"] = {
         name: "Khởi nghiệp và phát triển kinh doanh (BBAE)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:24.92,hsa: 95.44 },
-        note: "xxx"
+        note: "..."
       },
         "EP02": {
         name: "Khoa học tính toán trong Tài chính và Bảo hiểm",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:25.5,hsa: 99.5},
-        note: "xxx"
+        note: "..."
       },
         "EP03": {
         name: "Phân tích dữ liệu kinh tế (EDA)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:26.78,hsa: 107.29 },
-        note: "xxx"
+        note: "..."
       },
         "EP04": {
         name: "Kế toán tích hợp chứng chi quốc tế (ICAEW CFAB)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:25.9,hsa: 102.3 },
-        note: "xxx"
+        note: "..."
       },
         "EP05": {
         name: "Kinh doanh số (E-BDB)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:26.4,hsa: 105.2 },
-        note: "xxx"
+        note: "..."
       },
         "EP06": {
         name: "Phân tích kinh doanh (BA)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:27.5,hsa: 111.25 },
-        note: "xxx"
+        note: "..."
       },
         "EP07": {
         name: "Quản trị điều hành thông minh (E-SOM)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:25.1,hsa:96.7 },
-        note: "xxx"
+        note: "..."
       },
         "EP08": {
         name: "Quản trị chất lượng và Đổi mới (E-MQI)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:24.2,hsa: 90.4 },
-        note: "xxx"
+        note: "..."
       },
         "EP09": {
         name: "Công nghệ Tài chính và Ngân hàng số",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:26.92,hsa: 104.6 },
-        note: "xxx"
+        note: "..."
       },
         "EP10": {
         name: "Tài chính và Đầu tư (BFI)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
          "EP11": {
         name: "Quản trị khách sạn quốc tế (IHME)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP12": {
         name: "Kiểm toán tích hợp chứng chỉ quốc tế (ICAEW CFAB)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP13": {
         name: "Kinh tế học tài chính (FE)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP14": {
         name: "Logistics và Quản lý chuỗi cung ứng tích hợp chứng chi quốc tế (LSIC)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP15": {
         name: "Khoa học dữ liệu",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP16": {
         name: "Trí tuệ nhân tạo",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP17": {
         name: "Kỹ thuật phần mềm",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP18": {
         name: "Quản trị giải trí và sự kiện	",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP19": {
         name: "Công nghệ Marketing",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP20": {
         name: "Công nghệ Logistics và Quản trị chuỗi cung ứng",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP21": {
         name: "Kiểm toán nội bộ",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP22": {
         name: "Kinh tế quốc tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP23": {
         name: "Kinh tế số",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP24": {
         name: "Kinh tế Y tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP25": {
         name: "Phát triển quốc tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP26": {
         name: "Công nghệ môi trường và phát triển bền vững",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP27": {
         name: "Quản trị công nghiệp sáng tạo",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP28": {
         name: "Quản trị nhân lực quốc tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP29": {
         name: "Quản trị rủi ro định lượng",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP30": {
         name: "Toán ứng dụng",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP31": {
         name: "Thẩm định giá",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EP32": {
         name: "Thống kê và trí tuệ kinh doanh",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "EPMP": {
         name: "Quản lý công và Chính sách (E-PMP)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:23,hsa: 87 },
-        note: "xxx"
+        note: "..."
       },
         "POHE1": {
         name: "Quản trị khách sạn",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:25.61,hsa: 100.27 },
-        note: "xxx"
+        note: "..."
       },
         "POHE2": {
         name: "Quản trị lữ hành",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:24.64,hsa: 93.48 },
-        note: "xxx"
+        note: "..."
       },
         "POHE3": {
         name: "Truyền thông Marketing",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:27.61,hsa: 111.85 },
-        note: "xxx"
+        note: "..."
       },
         "POHE4": {
         name: "Luật kinh doanh",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:25.5,hsa: 99.5 },
-        note: "xxx"
+        note: "..."
       },
         "POHE5": {
         name: "Quản trị kinh doanh thương mại",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:26.29,hsa: 104.6 },
-        note: "xxx"
+        note: "..."
       },
         "POHE6": {
         name: "Quản lý thị trường",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:24.66,hsa: 93.62 },
-        note: "xxx"
+        note: "..."
       },
         "POHE7": {
         name: "Thẩm định giá",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:24.55,hsa: 92.85 },
-        note: "xxx"
+        note: "..."
       },
         "EBBA": {
         name: "Quản trị kinh doanh (E-BBA)",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:25.64,hsa: 100.48 },
-        note: "xxx"
+        note: "..."
       },
         "7340205": {
         name: "Công nghệ tài chính",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7480202": {
         name: "An toàn thông tin",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340204": {
         name: "Bảo hiểm",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340116": {
         name: "Bất động sản",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7480201": {
         name: "Công nghệ thông tin",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7480104": {
         name: "Hệ thống thông tin",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340405": {
         name: "Hệ thống thông tin quản lý",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340301": {
         name: "Kế toán",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7480101": {
         name: "Khoa học máy tính",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340401": {
         name: "Khoa học quản lý",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340302": {
         name: "Kiểm toán",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7620114": {
         name: "Kinh doanh nông nghiệp",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340120": {
         name: "Kinh doanh quốc tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340121": {
         name: "Kinh doanh thương mại",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310104": {
         name: "Kinh tế đầu tư",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310101_1": {
         name: "Kinh tế học",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7620115": {
         name: "Kinh tế nông nghiệp",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310105": {
         name: "Kinh tế phát triển",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310106": {
         name: "Kinh tế quốc tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7850102": {
         name: "Kinh tế tài nguyên thiên nhiên",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310101_2": {
         name: "Kinh tế và quản lý đô thị",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310101_3": {
         name: "Kinh tế và quản lý nguồn nhân lực",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7510605": {
         name: "Logistics và Quản lý chuỗi cung ứng",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7380101": {
         name: "Luật",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7380107": {
         name: "Luật kinh tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7380109": {
         name: "Luật thương mại quốc tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340115": {
         name: "Marketing",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7220201": {
         name: "Ngôn ngữ Anh",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7320108": {
         name: "Quan hệ công chúng",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
 
         "7340408": {
         name: "Quan hệ lao động",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340403": {
         name: "Quản lý công",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7850103": {
         name: "Quản lý đất đai",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340409": {
         name: "Quản lý dự án",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7850101": {
         name: "Quản lý tài nguyên và môi trường",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7810103": {
         name: "Quản trị dịch vụ du lịch và lữ hành",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7810201": {
         name: "Quản trị khách sạn",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340101": {
         name: "Quản trị kinh doanh",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340404": {
         name: "Quản trị nhân lực",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340201": {
         name: "Tài chính - Ngân hàng",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310107": {
         name: "Thống kê kinh tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7340121": {
         name: "Thương mại điện tử",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "7310108": {
         name: "Toán kinh tế",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "TT1_7340301": {
         name: "Kế toán - CT tiên tiến TT1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "TT1_7340201": {
         name: "Kế hoạch tài chính - CT tiên tiến TT1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "TT1_7340101": {
         name: "Quản trị kinh doanh - CT tiên tiến TT1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "TT2_7340201": {
         name: "Tài chính - CT tiên tiến TT2",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "TT2_7340120": {
         name: "Kinh doanh quốc tế - CT tiên tiến TT2",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC1_7310105": {
         name: "Kinh tế phát triển - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC1_7340201": {
         name: "Ngân hàng - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC1_7380201": {
         name: "Công nghệ thông tin và chuyển đổi số - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC1_7340204": {
         name: "Bảo hiểm tích hợp chứng chỉ ANZ1IF - CT chất lượng cao CLC1",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC2_7310104": {
         name: "Kinh tế Đầu tư - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC2_7340404": {
         name: "Quản trị nhân lực - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC2_7340101": {
         name: "Quản trị Kinh doanh - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC2_7320108": {
         name: "Quan hệ công chúng - CT chất lượng cao CLC2",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7340201": {
         name: "Tài chính doanh nghiệp - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7340115": {
         name: "Digital Marketing (Marketing số) - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7340115": {
         name: "Quản trị Marketing - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7340120": {
         name: "Quản trị Kinh doanh quốc tế - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7310106": {
         name: "Kinh tế quốc tế - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7510605": {
         name: "Logistics và Quản lý chuỗi cung ứng - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7340112": {
         name: "Thương mại điện tử - CT chất lượng cao CLC3	",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       },
         "CLC3_7340302": {
         name: "Kiểm toán tích hợp chứng chỉ ACCA - CT chất lượng cao CLC3",
         combs: ["A00","A01","D01","D07"],
         scores: { combined:null,hsa: null },
-        note: "xxx"
+        note: "..."
       }
     }
 };
