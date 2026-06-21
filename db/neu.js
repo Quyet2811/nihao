@@ -470,7 +470,7 @@ UNIVERSITY_DATABASE["NEU"] = {
         "7850103": {
         name: "Quản lý đất đai",
         combs: ["A00","A01","D01","D07"],
-        scores: { combined:null,hsa: null },
+        scores: { combined:24.38,hsa: 91.66 },
         note: "..."
       },
         "7340409": {
